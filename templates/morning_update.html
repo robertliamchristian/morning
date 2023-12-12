@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Morning Update</title>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Good Morning, Robbie!</h1>
+    <p><strong>Date:</strong> {{ today_date }}</p>
+    <h2>Weather in Portland, OR</h2>
+    <p><strong>High:</strong> {{ temp }}°F</p>
+    <p><strong>Low:</strong> {{ temp_low }}°F</p> <!-- Ensure you have temp_low in your context -->
+    <p><strong>Conditions:</strong> {{ weather_description }}</p>
+    <p><strong>Sunrise:</strong> {{ sunrise }}</p> <!-- Ensure you have sunrise in your context -->
+    <p><strong>Sunset:</strong> {{ sunset }}</p> <!-- Ensure you have sunset in your context -->
+    <p><strong>Days until New Year's:</strong> {{ days_new_year }}</p>
+    <p><strong>Days until Your Birthday:</strong> {{ days_birthday }}</p>
+    <p><strong>Days until Lindsay's Birthday:</strong> {{ days_lindsay_birthday }}</p>
+    <h2>Today's Football Matches</h2>
+    <ul>
+        {% for match in matches_data %}
+            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} || {{ match['Odds 1'] }} - {{ match['Odds X'] }} - {{ match['Odds 2'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
