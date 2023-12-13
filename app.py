@@ -2,6 +2,7 @@ from datetime import datetime
 import requests
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
+import random
 
 def render_template(context):
     file_loader = FileSystemLoader('templates')
@@ -75,6 +76,18 @@ def morning_update_dates():
     days_until_lindsay_birthday = (lindsay_birthday - today).days
     return today_formatted, days_until_new_years, days_until_birthday, days_until_lindsay_birthday
 
+def get_random_food():
+    breakfast_options = ["protein shake", "protein bar"]
+    lunch_options = ["Paris Baguette", "Subway", "sushi"]
+    dinner_options = ["Paris Baguette", "Subway", "sushi", "Mexican", "fast food"]
+    
+    return {
+        'breakfast': random.choice(breakfast_options),
+        'lunch': random.choice(lunch_options),
+        'dinner': random.choice(dinner_options)
+    }
+
+
 def morning_update(weather_api_key, football_api_key):
     # Fetch weather data
     temp, weather_description, temp_high, temp_low, sunrise, sunset = fetch_weather(weather_api_key)
@@ -82,6 +95,7 @@ def morning_update(weather_api_key, football_api_key):
     football_data = fetch_football_predictions(football_api_key)
     # Fetch date information
     today_date, days_new_year, days_birthday, days_lindsay_birthday = morning_update_dates()
+    food_recommendations = get_random_food()
     
     # Adjust the context for the template
     context = {
@@ -95,7 +109,8 @@ def morning_update(weather_api_key, football_api_key):
         'days_new_year': days_new_year,
         'days_birthday': days_birthday,
         'days_lindsay_birthday': days_lindsay_birthday,
-        'matches_data': football_data.to_dict(orient='records')  # Convert DataFrame to list of dicts
+        'matches_data': football_data.to_dict(orient='records'),  # Convert DataFrame to list of dicts
+        'food_for_today': food_recommendations
     }
     
     # Render the template

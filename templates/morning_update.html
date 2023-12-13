@@ -4,15 +4,35 @@
     <title>Morning Update</title>
     <style>
         body {
-            background-color: black;
-            color: whitesmoke;
+            background-color: darkblue;
+            color: rgb(245, 155, 209);
+            text-align: left;
+            padding-left: 20px;
         }
+
+        #headers {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        li {
+            text-align: left;
+        }
+
+        h2 {
+            color: white;
+            font-style: italic;
+        }
+
     </style>
 </head>
 <body>
     <h1>Good Morning, Robbie!</h1>
-    <p><strong>Date:</strong> {{ today_date }}</p>
-    <h2>Weather in Portland, OR</h2>
+    <h2><strong>Date:</strong> {{ today_date }}</h2>
+    <div id="headers"><h3>Weather in Portland, OR</h3></div>
     <p><strong>High:</strong> {{ temp }}°F</p>
     <p><strong>Low:</strong> {{ temp_low }}°F</p> <!-- Ensure you have temp_low in your context -->
     <p><strong>Conditions:</strong> {{ weather_description }}</p>
@@ -21,10 +41,16 @@
     <p><strong>Days until New Year's:</strong> {{ days_new_year }}</p>
     <p><strong>Days until Your Birthday:</strong> {{ days_birthday }}</p>
     <p><strong>Days until Lindsay's Birthday:</strong> {{ days_lindsay_birthday }}</p>
+    <section class="food">
+        <h2>Food for {{ today_date }}:</h2>
+        <p><strong>Breakfast (random):</strong> {{ food_for_today.breakfast }}</p>
+        <p><strong>Lunch (random):</strong> {{ food_for_today.lunch }}</p>
+        <p><strong>Dinner (random):</strong> {{ food_for_today.dinner }}</p>
+    </section>
     <h2>Today's Football Matches</h2>
     <ul>
         {% for match in matches_data %}
-            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} || {{ match['Odds 1'] }} - {{ match['Odds X'] }} - {{ match['Odds 2'] }}</li>
+            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} <br>    {{ match['Odds 1'] }} ----- {{ match['Odds X'] }} ----- {{ match['Odds 2'] }}</li>
         {% endfor %}
     </ul>
 </body>
