@@ -4,8 +4,8 @@
     <title>Morning Update</title>
     <style>
         body {
-            background-color: darkblue;
-            color: rgb(245, 155, 209);
+            background-color: rgb(22, 22, 42);
+            color: rgb(255, 231, 246);
             text-align: left;
             padding-left: 20px;
         }
@@ -23,8 +23,24 @@
         }
 
         h2 {
-            color: white;
+            color: rgb(106, 133, 254);
             font-style: italic;
+        }
+
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .stock-table th, .stock-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .stock-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #372943;
+            color: white;
         }
 
     </style>
@@ -41,16 +57,24 @@
     <p><strong>Days until New Year's:</strong> {{ days_new_year }}</p>
     <p><strong>Days until Your Birthday:</strong> {{ days_birthday }}</p>
     <p><strong>Days until Lindsay's Birthday:</strong> {{ days_lindsay_birthday }}</p>
+    <h2>Today's Stock Updates</h2>
+    <div>
+        {{ daily_stock_data | safe }}
+    </div>
     <section class="food">
-        <h2>Food for {{ today_date }}:</h2>
+        <h2>Food for today:</h2>
         <p><strong>Breakfast (random):</strong> {{ food_for_today.breakfast }}</p>
         <p><strong>Lunch (random):</strong> {{ food_for_today.lunch }}</p>
         <p><strong>Dinner (random):</strong> {{ food_for_today.dinner }}</p>
     </section>
+    <section class="tasks">
+        <h2>Task for today:</h2>
+        <p><strong>Task (random):</strong> {{ task_for_today.task }}</p>
+    </section>
     <h2>Today's Football Matches</h2>
     <ul>
         {% for match in matches_data %}
-            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} <br>    {{ match['Odds 1'] }} ----- {{ match['Odds X'] }} ----- {{ match['Odds 2'] }}</li>
+            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} <br>    {{ match['Odds 1'] }} ----- {{ match['Odds X'] }} ----- {{ match['Odds 2'] }}</li> <br>
         {% endfor %}
     </ul>
 </body>

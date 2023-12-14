@@ -4,8 +4,8 @@
     <title>Morning Update</title>
     <style>
         body {
-            background-color: darkblue;
-            color: rgb(245, 155, 209);
+            background-color: rgb(22, 22, 42);
+            color: rgb(255, 231, 246);
             text-align: left;
             padding-left: 20px;
         }
@@ -23,8 +23,24 @@
         }
 
         h2 {
-            color: white;
+            color: rgb(106, 133, 254);
             font-style: italic;
+        }
+
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .stock-table th, .stock-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .stock-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #372943;
+            color: white;
         }
 
     </style>
@@ -33,60 +49,136 @@
     <h1>Good Morning, Robbie!</h1>
     <h2><strong>Date:</strong> Wednesday, December 13, 2023</h2>
     <div id="headers"><h3>Weather in Portland, OR</h3></div>
-    <p><strong>High:</strong> 44.02°F</p>
-    <p><strong>Low:</strong> 34.3°F</p> <!-- Ensure you have temp_low in your context -->
-    <p><strong>Conditions:</strong> broken clouds</p>
+    <p><strong>High:</strong> 45.5°F</p>
+    <p><strong>Low:</strong> 40.12°F</p> <!-- Ensure you have temp_low in your context -->
+    <p><strong>Conditions:</strong> overcast clouds</p>
     <p><strong>Sunrise:</strong> 07:42</p> <!-- Ensure you have sunrise in your context -->
     <p><strong>Sunset:</strong> 16:27</p> <!-- Ensure you have sunset in your context -->
     <p><strong>Days until New Year's:</strong> 18</p>
     <p><strong>Days until Your Birthday:</strong> 53</p>
     <p><strong>Days until Lindsay's Birthday:</strong> 175</p>
+    <h2>Today's Stock Updates</h2>
+    <div>
+        <table border="1" class="dataframe stock-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Date</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2023-12-13</td>
+      <td>75.8600</td>
+      <td>76.7800</td>
+      <td>74.8200</td>
+      <td>76.6700</td>
+      <td>4829640</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
+      <td>2023-12-12</td>
+      <td>75.6200</td>
+      <td>77.8300</td>
+      <td>75.6200</td>
+      <td>76.3400</td>
+      <td>5290261</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
+      <td>2023-12-11</td>
+      <td>74.0300</td>
+      <td>74.3000</td>
+      <td>73.0101</td>
+      <td>74.2500</td>
+      <td>2650122</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
+      <td>2023-12-13</td>
+      <td>6.6300</td>
+      <td>7.1200</td>
+      <td>6.5200</td>
+      <td>7.0900</td>
+      <td>12571</td>
+      <td>UHG</td>
+    </tr>
+    <tr>
+      <td>2023-12-12</td>
+      <td>6.7500</td>
+      <td>6.7500</td>
+      <td>6.5900</td>
+      <td>6.5900</td>
+      <td>9178</td>
+      <td>UHG</td>
+    </tr>
+    <tr>
+      <td>2023-12-11</td>
+      <td>6.9725</td>
+      <td>6.9725</td>
+      <td>6.5600</td>
+      <td>6.7500</td>
+      <td>30445</td>
+      <td>UHG</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
     <section class="food">
-        <h2>Food for Wednesday, December 13, 2023:</h2>
+        <h2>Food for today:</h2>
         <p><strong>Breakfast (random):</strong> protein shake</p>
-        <p><strong>Lunch (random):</strong> sushi</p>
-        <p><strong>Dinner (random):</strong> Mexican</p>
+        <p><strong>Lunch (random):</strong> Paris Baguette</p>
+        <p><strong>Dinner (random):</strong> Paris Baguette</p>
+    </section>
+    <section class="tasks">
+        <h2>Task for today:</h2>
+        <p><strong>Task (random):</strong> meditate</p>
     </section>
     <h2>Today's Football Matches</h2>
     <ul>
         
-            <li>Sanat Naft Abadan vs Gol Gohar Sirjan || 2023-12-13T11:30:00 <br>    3.19 ----- 2.8 ----- 2.34</li>
+            <li>Sanat Naft Abadan vs Gol Gohar Sirjan || 2023-12-13T11:30:00 <br>    3.19 ----- 2.8 ----- 2.34</li> <br>
         
-            <li>Gudja United vs Birkirkara || 2023-12-13T10:00:00 <br>    8.067 ----- 4.133 ----- 1.36</li>
+            <li>Gudja United vs Birkirkara || 2023-12-13T10:00:00 <br>    8.067 ----- 4.133 ----- 1.36</li> <br>
         
-            <li>Persebaya Surabaya vs Persis Solo || 2023-12-13T11:00:00 <br>    1.97 ----- 3.417 ----- 3.257</li>
+            <li>Persebaya Surabaya vs Persis Solo || 2023-12-13T11:00:00 <br>    1.97 ----- 3.417 ----- 3.257</li> <br>
         
-            <li>NK Celje vs FC Koper || 2023-12-13T14:00:00 <br>    1.56 ----- 3.875 ----- 4.963</li>
+            <li>NK Celje vs FC Koper || 2023-12-13T14:00:00 <br>    1.56 ----- 3.875 ----- 4.963</li> <br>
         
-            <li>Coventry vs Southampton || 2023-12-13T19:45:00 <br>    2.712 ----- 3.458 ----- 2.538</li>
+            <li>Norwich vs Sheffield Wednesday || 2023-12-13T19:45:00 <br>    1.914 ----- 3.59 ----- 3.992</li> <br>
         
-            <li>Bohemians 1905 Prague vs Slovan Liberec || 2023-12-13T17:00:00 <br>    2.262 ----- 3.374 ----- 3.014</li>
+            <li>Thun vs Bellinzona || 2023-12-13T18:00:00 <br>    1.525 ----- 4.1 ----- 5.062</li> <br>
         
-            <li>Norwich vs Sheffield Wednesday || 2023-12-13T19:45:00 <br>    1.914 ----- 3.59 ----- 3.992</li>
+            <li>Chennaiyin FC vs Bengaluru FC || 2023-12-13T14:30:00 <br>    2.44 ----- 3.32 ----- 2.724</li> <br>
         
-            <li>Thun vs Bellinzona || 2023-12-13T18:00:00 <br>    1.525 ----- 4.1 ----- 5.062</li>
+            <li>AmaZulu Durban vs Sekhukhune United || 2023-12-13T17:30:00 <br>    2.22 ----- 2.903 ----- 3.33</li> <br>
         
-            <li>Chennaiyin FC vs Bengaluru FC || 2023-12-13T14:30:00 <br>    2.44 ----- 3.32 ----- 2.724</li>
+            <li>Winterthur vs Zurich || 2023-12-13T19:30:00 <br>    3.504 ----- 3.608 ----- 1.994</li> <br>
         
-            <li>AmaZulu Durban vs Sekhukhune United || 2023-12-13T17:30:00 <br>    2.22 ----- 2.903 ----- 3.33</li>
+            <li>Leicester vs Millwall || 2023-12-13T19:45:00 <br>    1.388 ----- 4.68 ----- 8.32</li> <br>
         
-            <li>Dynamo Ceske Budejovice vs Hradec Kralove || 2023-12-13T16:00:00 <br>    2.186 ----- 3.404 ----- 3.136</li>
+            <li>Esperance de Tunis vs US Tataouine || 2023-12-13T16:00:00 <br>    1.13 ----- 6.817 ----- 16.833</li> <br>
         
-            <li>Winterthur vs Zurich || 2023-12-13T19:30:00 <br>    3.504 ----- 3.608 ----- 1.994</li>
+            <li>Cardiff vs Birmingham || 2023-12-13T19:45:00 <br>    1.882 ----- 3.564 ----- 4.186</li> <br>
         
-            <li>Leicester vs Millwall || 2023-12-13T19:45:00 <br>    1.388 ----- 4.68 ----- 8.32</li>
+            <li>Arbroath vs Raith Rovers || 2023-12-13T19:45:00 <br>    4.554 ----- 3.806 ----- 1.666</li> <br>
         
-            <li>Esperance de Tunis vs US Tataouine || 2023-12-13T16:00:00 <br>    1.13 ----- 6.817 ----- 16.833</li>
+            <li>Middlesbrough vs Hull City || 2023-12-13T20:00:00 <br>    1.848 ----- 3.796 ----- 4.03</li> <br>
         
-            <li>Cardiff vs Birmingham || 2023-12-13T19:45:00 <br>    1.882 ----- 3.564 ----- 4.186</li>
+            <li>Mlada Boleslav vs Karvina || 2023-12-13T16:00:00 <br>    1.48 ----- 4.386 ----- 5.96</li> <br>
         
-            <li>MAT Tetouan vs RSB Berkane || 2023-12-13T17:00:00 <br>    2.878 ----- 2.79 ----- 2.498</li>
+            <li>Dynamo Ceske Budejovice vs Hradec Kralove || 2023-12-13T16:00:00 <br>    2.186 ----- 3.404 ----- 3.136</li> <br>
         
-            <li>Arbroath vs Raith Rovers || 2023-12-13T19:45:00 <br>    4.554 ----- 3.806 ----- 1.666</li>
+            <li>MAT Tetouan vs RSB Berkane || 2023-12-13T17:00:00 <br>    2.878 ----- 2.79 ----- 2.498</li> <br>
         
-            <li>Middlesbrough vs Hull City || 2023-12-13T20:00:00 <br>    1.848 ----- 3.796 ----- 4.03</li>
+            <li>Bohemians 1905 Prague vs Slovan Liberec || 2023-12-13T17:00:00 <br>    2.262 ----- 3.374 ----- 3.014</li> <br>
         
-            <li>Mlada Boleslav vs Karvina || 2023-12-13T16:00:00 <br>    1.48 ----- 4.386 ----- 5.96</li>
+            <li>Coventry vs Southampton || 2023-12-13T19:45:00 <br>    2.712 ----- 3.458 ----- 2.538</li> <br>
         
     </ul>
 </body>
