@@ -4,6 +4,8 @@ import pandas as pd
 from jinja2 import Environment, FileSystemLoader
 import random
 
+app = Flask(__name__)
+
 def render_template(context):
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
