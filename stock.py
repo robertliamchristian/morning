@@ -30,4 +30,3 @@ def fetch_daily_stock_data(symbol):
     else:
         print(f"No data for symbol: {symbol}")
         return pd.DataFrame()
-        print(df)

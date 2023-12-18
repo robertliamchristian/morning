@@ -57,6 +57,17 @@
     <p><strong>Days until New Year's:</strong> {{ days_new_year }}</p>
     <p><strong>Days until Your Birthday:</strong> {{ days_birthday }}</p>
     <p><strong>Days until Lindsay's Birthday:</strong> {{ days_lindsay_birthday }}</p>
+    <!--<h2>News</h2>
+    
+    <ul>
+        {% for article in today_news %}
+            <li><a href="{{ article['url'] }}">{{ article['title'] }}</a></li>
+        {% endfor %}
+    </ul>-->
+    <section class="calendar">
+        <h2>Today's Calendar Events</h2>
+        {{ calendar_events | safe }}
+    </section>
     <h2>Today's Stock Updates</h2>
     <div>
         {{ daily_stock_data | safe }}
@@ -71,11 +82,19 @@
         <h2>Task for today:</h2>
         <p><strong>Task (random):</strong> {{ task_for_today.task }}</p>
     </section>
+    <section class="quotes">
+        <h2>Turkish Quote of the Day</h2>
+        <p><strong>Quote:</strong> {{ turkish_quote }}</p>
+        <p><strong>Translation:</strong> {{ english_translation }}</p>
+    </section>
+    
+    
     <h2>Today's Football Matches</h2>
     <ul>
         {% for match in matches_data %}
             <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} <br>    {{ match['Odds 1'] }} ----- {{ match['Odds X'] }} ----- {{ match['Odds 2'] }}</li> <br>
         {% endfor %}
     </ul>
-</body>
-</html>
+    
+    </body>
+    </html>
