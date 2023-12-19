@@ -68,6 +68,11 @@
         <h2>Today's Calendar Events</h2>
         {{ calendar_events | safe }}
     </section>
+    <ul class="news-list">
+        {% for news_item in news_data %}
+            <li>{{ news_item.title }}</li>
+        {% endfor %}
+    </ul>
     <h2>Today's Stock Updates</h2>
     <div>
         {{ daily_stock_data | safe }}
@@ -89,12 +94,11 @@
     </section>
     
     
-    <h2>Today's Football Matches</h2>
-    <ul>
-        {% for match in matches_data %}
-            <li>{{ match['Home Team'] }} vs {{ match['Away Team'] }} || {{ match['Start Date'] }} <br>    {{ match['Odds 1'] }} ----- {{ match['Odds X'] }} ----- {{ match['Odds 2'] }}</li> <br>
-        {% endfor %}
-    </ul>
+    <div class="football-odds">
+        <h2>Today's Football Odds</h2>
+        {{ football_odds_data|safe }}
+    </div>
+    
     
     </body>
     </html>

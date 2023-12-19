@@ -1,9 +1,10 @@
-
 import datetime
 import requests
 import pandas as pd
 from jinja2 import Environment, FileSystemLoader
 import random
+import datetime
+from datetime import datetime as dt
 
 def render_template(context):
     file_loader = FileSystemLoader('templates')
@@ -40,40 +41,7 @@ def fetch_weather(api_key, lat=45.52, lon=-122.68):
         print("Error fetching weather data")
         return None, None, None, None, None, None
 
-# Commented out the fetch_football_predictions function
-def fetch_football_predictions(football_api_key):
-    today_date = datetime.datetime.now().date().isoformat()
-    url = "https://football-prediction-api.p.rapidapi.com/api/v2/predictions"
-    querystring = {"iso_date": today_date, "market": "classic"}
-    headers = {
-        "X-RapidAPI-Key": football_api_key,
-        "X-RapidAPI-Host": "football-prediction-api.p.rapidapi.com"
-    }
-    response = requests.get(url, headers=headers, params=querystring)
-    data = response.json()['data']
-    print("Football API Response:", data)
-    df = pd.DataFrame([{
-        'Home Team': match['home_team'],
-        'Away Team': match['away_team'],
-        'competition_name': match['competition_name'],
-        'Status': match['status'],
-        'Result': match['result'],
-        'Start Date': match['start_date'],
-        'Odds 1': match['odds'].get('1'),
-        'Odds X': match['odds'].get('X'),
-        'Odds 2': match['odds'].get('2'),
-    } for match in data])
 
-    # Filter the DataFrame
-    competitions = ['Championship', 'Premier League', 'A-League', 'Super League']
-    df = df[df['competition_name'].isin(competitions)]
-
-    distinct_competitions = df['competition_name'].unique()
-    for competition in distinct_competitions:
-        print(competition)
-    return df
-
-fetch_football_predictions('d49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84')
 
 
 def fetch_calendar_events(api_key, calendar_id):
@@ -180,6 +148,84 @@ def fetch_daily_stock_data(symbol):
     else:
         print(f"No data for symbol: {symbol}")
         return pd.DataFrame()
+    
+def extract_odds(bookmakers, bet_name="Match Winner"):
+    """Extracts odds for Home, Draw, and Away from the bookmakers data."""
+    for bookmaker in bookmakers:
+        for bet in bookmaker['bets']:
+            if bet['name'] == bet_name:
+                odds = {value['value']: value['odd'] for value in bet['values']}
+                return odds.get("Home"), odds.get("Draw"), odds.get("Away")
+    return None, None, None
+
+def extract_odds_data(odds_data):
+    """Extract odds and fixture ID from the odds data."""
+    extracted_data = []
+    for item in odds_data.get('response', []):
+        fixture_id = item['fixture']['id']
+        home_odds, draw_odds, away_odds = extract_odds(item.get('bookmakers', []))
+        if home_odds and draw_odds and away_odds:
+            extracted_data.append({'fixture_id': fixture_id, 'home_odds': home_odds, 'draw_odds': draw_odds, 'away_odds': away_odds})
+    return extracted_data
+
+def fetch_odds(api_key, date):
+    """Fetch odds data for a given date."""
+    url = "https://api-football-v1.p.rapidapi.com/v3/odds"
+    headers = {
+        "X-RapidAPI-Key": api_key,
+        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
+    }
+    querystring = {"date": date}
+    response = requests.get(url, headers=headers, params=querystring)
+    return response.json()
+
+def fetch_fixtures(api_key, date):
+    """Fetch fixtures data for a given date."""
+    url = "https://api-football-v1.p.rapidapi.com/v3/fixtures"
+    headers = {
+        "X-RapidAPI-Key": api_key,
+        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com"
+    }
+    querystring = {"date": date}
+    response = requests.get(url, headers=headers, params=querystring)
+    return response.json()
+
+def extract_fixtures_data(fixtures_data):
+    """Extracts teams, league, and fixture ID from fixtures data."""
+    extracted_data = []
+    for item in fixtures_data.get('response', []):
+        fixture_id = item['fixture']['id']
+        home_team = item['teams']['home']['name']
+        away_team = item['teams']['away']['name']
+        league_name = item['league']['name']
+        date = item['fixture']['date']
+        extracted_data.append({'fixture_id': fixture_id, 'date': date, 'home_team': home_team, 'away_team': away_team, 'league_name': league_name})
+    return extracted_data   
+    
+def fetch_football_odds(api_key, date=dt.now().strftime("%Y-%m-%d")):
+    # Fetch odds data
+    odds_data = fetch_odds(api_key, date)
+    # Fetch fixtures data
+    fixtures_data = fetch_fixtures(api_key, date)
+
+    # Extract relevant data from odds and fixtures
+    odds_extracted = extract_odds_data(odds_data)
+    fixtures_extracted = extract_fixtures_data(fixtures_data)
+
+    # Convert to DataFrames
+    odds_df = pd.DataFrame(odds_extracted)
+    fixtures_df = pd.DataFrame(fixtures_extracted)
+
+    # Merge DataFrames on fixture_id
+    merged_df = pd.merge(fixtures_df, odds_df, on='fixture_id')
+
+    # Format final DataFrame
+    final_df = merged_df[['date', 'home_team', 'away_team', 'league_name', 'home_odds', 'draw_odds', 'away_odds']]
+    final_df['Match'] = final_df['home_team'] + ' vs ' + final_df['away_team']
+    final_df = final_df[['date', 'Match', 'league_name', 'home_odds', 'draw_odds', 'away_odds']]
+
+    return final_df
+
 
 def get_daily_stock_data():
     symbols = ['CNC', 'UHG', 'GCMG','CVS','CI','PFE','CRSP']
@@ -198,23 +244,51 @@ def get_daily_stock_data():
         combined_df = pd.concat(all_data)
     return combined_df
 
-#def morning_update(weather_api_key, football_api_key):
+import pandas as pd
+'''
+def fetch_news_data():
+    url = "https://newsnow.p.rapidapi.com/headline"
+    payload = { "text": "United States" }
+    headers = {
+        "content-type": "application/json",
+        "X-RapidAPI-Key": "d49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84",
+        "X-RapidAPI-Host": "newsnow.p.rapidapi.com"
+    }
+
+    news_data = response.json()
+    if isinstance(news_data, list):
+        print("news_data is a list")
+
+        # Check if the first item in the list is a dictionary
+        if isinstance(news_data[0], dict):
+            print("The first item in news_data is a dictionary")
+    else:
+        print("news_data is not a list")
+
+    return news_data
+'''
+# Modify the morning_update function to accept an additional argument for the football API key
 def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_key):
     # Fetch weather data
     temp, weather_description, temp_high, temp_low, sunrise, sunset = fetch_weather(weather_api_key)
-    # Fetch football matches data
-    football_data = fetch_football_predictions(football_api_key)
+    
+    # Fetch soccer data
+    football_odds_data = fetch_football_odds(football_api_key)
+    
     # Fetch calendar events
     calendar_events = fetch_calendar_events(calendar_api_key, calendar_id)
+    
     # Fetch stock data
     daily_stock_data = get_daily_stock_data()
+
     # Fetch date information
     today_date, days_new_year, days_birthday, days_lindsay_birthday = morning_update_dates()
     food_recommendations = get_random_food()
     task_recommendations = get_random_tasks()
     turkish_quote, english_translation = get_random_turkish_quote()
+    # Fetch news data
+    #news_data = fetch_news_data()
 
-    
     # Adjust the context for the template
     context = {
         'temp': temp,
@@ -227,15 +301,16 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
         'days_new_year': days_new_year,
         'days_birthday': days_birthday,
         'days_lindsay_birthday': days_lindsay_birthday,
-        'matches_data': football_data.to_dict(orient='records'),  # Convert DataFrame to list of dicts
+        'football_odds_data': football_odds_data.to_html(index=False, classes='football-odds-table'),
         'food_for_today': food_recommendations,
         'task_for_today': task_recommendations,
         'daily_stock_data': daily_stock_data.to_html(index=False, classes='stock-table'),
         'turkish_quote': turkish_quote,
         'english_translation': english_translation,
         'calendar_events': calendar_events.to_html(index=False, classes='calendar-table'),
-
+        #'news_data': news_data.to_html(index=False, classes='news-table'),
     }
+
     # Render the template
     rendered_html = render_template(context)
     with open('rendered_morning_update.html', 'w') as file:
@@ -243,13 +318,8 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
 
     print("Good Morning, Robbie! Report is ready to refresh")
 
-    
-
-
-
 weather_api_key = '89fbedb87c83a9faf12a1319c4df142e'
 calendar_api_key = 'AIzaSyBfw_KuFQwYvCgIm9ZDdJGuvqAKUWzmw5Q'
 calendar_id = 'robertliamchristian@gmail.com'
 football_api_key = 'd49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84'
-#morning_update(weather_api_key, football_api_key)
 morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_key)

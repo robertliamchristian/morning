@@ -15,7 +15,7 @@ response = requests.get(url, headers=headers, params=querystring)
 
 data = response.json()
 
+print(data)  # Print the JSON response
 
-
-df = pd.DataFrame(data)
-print(df)
+# df = pd.DataFrame(data)
+# print(df)
