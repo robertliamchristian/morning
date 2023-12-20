@@ -1,25 +1,28 @@
+import datetime
 import requests
 import pandas as pd
-url = "https://newsnow.p.rapidapi.com/newsv2"
+from jinja2 import Environment, FileSystemLoader
+import random
+import datetime
+from datetime import datetime as dt
 
-payload = {
-    "query": "AI",
-    "page": 1,
-    "time_bounded": False,
-    "from_date": "12/15/2023",
-    "to_date": "12/16/2023",
-    "location": "",
-    "category": "",
-    "source": ""
-}
-headers = {
-    "content-type": "application/json",
-    "X-RapidAPI-Key": "d49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84",
-    "X-RapidAPI-Host": "newsnow.p.rapidapi.com"
-}
-
-response = requests.post(url, json=payload, headers=headers)
-data = response.json()
-
-df = pd.DataFrame(data)
-print(df)
+def fetch_calendar_events(api_key, calendar_id):
+    url = f"https://www.googleapis.com/calendar/v3/calendars/{calendar_id}/events"
+    current_date = datetime.date.today()
+    start_of_day = datetime.datetime.combine(current_date, datetime.time())
+    end_of_day = datetime.datetime.combine(current_date, datetime.time(23, 59, 59))
+    params = {
+        'key': api_key,
+        'timeMin': start_of_day.isoformat() + 'Z',
+        'timeMax': end_of_day.isoformat() + 'Z',
+        'singleEvents': True,
+        'orderBy': 'startTime'
+    }
+    response = requests.get(url, params=params)
+    events = response.json().get('items', [])
+    data = [{'Name': event['summary'], 
+             'Start': event['start'].get('dateTime', event['start'].get('date')), 
+             'End': event['end'].get('dateTime', event['end'].get('date'))} 
+            for event in events]
+    df = pd.DataFrame(data)
+    return df

@@ -1,3 +1,11 @@
+import datetime
+import requests
+import pandas as pd
+from jinja2 import Environment, FileSystemLoader
+import random
+import datetime
+from datetime import datetime as dt
+
 def fetch_daily_stock_data(symbol):
     url = "https://alpha-vantage.p.rapidapi.com/query"
     querystring = {
@@ -30,3 +38,20 @@ def fetch_daily_stock_data(symbol):
     else:
         print(f"No data for symbol: {symbol}")
         return pd.DataFrame()
+    
+def get_daily_stock_data():
+    symbols = ['CNC', 'UHG', 'GCMG','CVS','CI','PFE','CRSP']
+    all_data = []
+
+    for symbol in symbols:
+        stock_data = fetch_daily_stock_data(symbol)
+        if not stock_data.empty:
+            # Sort the DataFrame by date and get the top 5 rows for the symbol
+            top_5_data = stock_data.sort_values(by='Date', ascending=False).head(3)
+            all_data.append(top_5_data)
+
+    if not all_data:
+        print("No data to concatenate")
+    else:
+        combined_df = pd.concat(all_data)
+    return combined_df

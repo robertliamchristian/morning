@@ -65,7 +65,7 @@
         {% endfor %}
     </ul>-->
     <section class="calendar">
-        <h2>Today's Calendar Events</h2>
+        <h2>Calendar Events</h2>
         {{ calendar_events | safe }}
     </section>
     <ul class="news-list">
@@ -73,7 +73,7 @@
             <li>{{ news_item.title }}</li>
         {% endfor %}
     </ul>
-    <h2>Today's Stock Updates</h2>
+    <h2>Stocks</h2>
     <div>
         {{ daily_stock_data | safe }}
     </div>
@@ -88,10 +88,13 @@
         <p><strong>Task (random):</strong> {{ task_for_today.task }}</p>
     </section>
     <section class="quotes">
-        <h2>Turkish Quote of the Day</h2>
+        <h2>Turkish Quote</h2>
         <p><strong>Quote:</strong> {{ turkish_quote }}</p>
         <p><strong>Translation:</strong> {{ english_translation }}</p>
     </section>
+    <section class="affirmations">
+        <h2>Affirmations</h2>
+        <p><strong>Affirmation:</strong> {{ affirmation }}</p>
     
     
     <div class="football-odds">
