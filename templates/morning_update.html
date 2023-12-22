@@ -8,6 +8,7 @@
             color: rgb(255, 231, 246);
             text-align: left;
             padding-left: 20px;
+            font: Helvetica;
         }
 
         #headers {
@@ -31,17 +32,19 @@
             width: 100%;
             border-collapse: collapse;
         }
-        .stock-table th, .stock-table td {
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
         }
-        .stock-table th {
+        th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
             background-color: #372943;
             color: white;
         }
+
+       
 
     </style>
 </head>
@@ -68,6 +71,17 @@
         <h2>Calendar Events</h2>
         {{ calendar_events | safe }}
     </section>
+    <br>
+    <div>
+        <h2>New York Winter Flight Tracker</h2>
+        {{ ny_flights|safe }}
+    </div>
+
+    <div>
+        <h2>Cyprus Flight Tracker</h2>
+        {{ cy_flights|safe }}
+    </div>
+    
     <ul class="news-list">
         {% for news_item in news_data %}
             <li>{{ news_item.title }}</li>

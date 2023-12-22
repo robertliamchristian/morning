@@ -11,6 +11,10 @@ from morning_dates import morning_update_dates
 from get_random import get_random_food, get_random_tasks, get_random_turkish_quote, get_random_affirmation
 from stock import get_daily_stock_data
 from get_soccer import fetch_football_odds
+from ny_flights import fetch_ny_flights
+from cy_flights import fetch_cy_flights
+
+
 
 
 def render_template(context):
@@ -35,7 +39,12 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
     task_recommendations = get_random_tasks()
     turkish_quote, english_translation = get_random_turkish_quote()
     affirmation = get_random_affirmation()
-    # Fetch news data
+    ny_flights_data = fetch_ny_flights()  # Call the function to get the DataFrame
+    ny_flights_html = ny_flights_data.to_html(index=False, classes='flights-table')
+    cy_flights_data = fetch_cy_flights()
+    cy_flights_html = cy_flights_data.to_html(index=False, classes='flights-table')
+
+    # Fetch news daa
     #news_data = fetch_news_data()
 
     context = {
@@ -57,9 +66,12 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
         'english_translation': english_translation,
         'calendar_events': calendar_events.to_html(index=False, classes='calendar-table'),
         'affirmation': affirmation,
+        'ny_flights': ny_flights_html,
+        'cy_flights': cy_flights_html,
         #'news_data': news_data.to_html(index=False, classes='news-table'),
+        
     }
-
+        
     # Render the template
     rendered_html = render_template(context)
     with open('rendered_morning_update.html', 'w') as file:

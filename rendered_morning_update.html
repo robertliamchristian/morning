@@ -8,6 +8,7 @@
             color: rgb(255, 231, 246);
             text-align: left;
             padding-left: 20px;
+            font: Helvetica;
         }
 
         #headers {
@@ -31,11 +32,11 @@
             width: 100%;
             border-collapse: collapse;
         }
-        .stock-table th, .stock-table td {
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
         }
-        .stock-table th {
+        th {
             padding-top: 12px;
             padding-bottom: 12px;
             text-align: left;
@@ -43,20 +44,22 @@
             color: white;
         }
 
+       
+
     </style>
 </head>
 <body>
     <h1>Good Morning, Robbie!</h1>
-    <h2><strong>Date:</strong> Wednesday, December 20, 2023</h2>
+    <h2><strong>Date:</strong> Friday, December 22, 2023</h2>
     <div id="headers"><h3>Weather in Portland, OR</h3></div>
-    <p><strong>High:</strong> 41.36°F</p>
-    <p><strong>Low:</strong> 37.53°F</p> <!-- Ensure you have temp_low in your context -->
-    <p><strong>Conditions:</strong> fog</p>
-    <p><strong>Sunrise:</strong> 07:47</p> <!-- Ensure you have sunrise in your context -->
-    <p><strong>Sunset:</strong> 16:29</p> <!-- Ensure you have sunset in your context -->
-    <p><strong>Days until New Year's:</strong> 11</p>
-    <p><strong>Days until Your Birthday:</strong> 46</p>
-    <p><strong>Days until Lindsay's Birthday:</strong> 168</p>
+    <p><strong>High:</strong> 41.76°F</p>
+    <p><strong>Low:</strong> 39.72°F</p> <!-- Ensure you have temp_low in your context -->
+    <p><strong>Conditions:</strong> moderate rain</p>
+    <p><strong>Sunrise:</strong> 07:48</p> <!-- Ensure you have sunrise in your context -->
+    <p><strong>Sunset:</strong> 16:30</p> <!-- Ensure you have sunset in your context -->
+    <p><strong>Days until New Year's:</strong> 9</p>
+    <p><strong>Days until Your Birthday:</strong> 44</p>
+    <p><strong>Days until Lindsay's Birthday:</strong> 166</p>
     <!--<h2>News</h2>
     
     <ul>
@@ -75,17 +78,148 @@
   <tbody>
     <tr>
       <td>O - DA Standup</td>
-      <td>2023-12-20T08:00:00-08:00</td>
-      <td>2023-12-20T09:00:00-08:00</td>
+      <td>2023-12-22T08:00:00-08:00</td>
+      <td>2023-12-22T09:00:00-08:00</td>
     </tr>
     <tr>
-      <td>O - Weekly DG</td>
-      <td>2023-12-20T12:00:00-08:00</td>
-      <td>2023-12-20T13:00:00-08:00</td>
+      <td>Robbie Ableto intake</td>
+      <td>2023-12-22T12:30:00-08:00</td>
+      <td>2023-12-22T13:30:00-08:00</td>
+    </tr>
+    <tr>
+      <td>REM, RH, &amp; RLC Research Discussion</td>
+      <td>2023-12-22T13:00:00-08:00</td>
+      <td>2023-12-22T14:00:00-08:00</td>
     </tr>
   </tbody>
 </table>
     </section>
+    <br>
+    <div>
+        <h2>New York Winter Flight Tracker</h2>
+        <table border="1" class="dataframe flights-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Itinerary</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure Date</th>
+      <th>Total Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>itinerary_0</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>133.90</td>
+    </tr>
+    <tr>
+      <td>itinerary_1</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_2</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_3</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_4</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_5</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_6</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_7</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_8</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>143.20</td>
+    </tr>
+    <tr>
+      <td>itinerary_9</td>
+      <td>PDX</td>
+      <td>NYC</td>
+      <td>2024-01-05</td>
+      <td>176.18</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <div>
+        <h2>Cyprus Flight Tracker</h2>
+        <table border="1" class="dataframe flights-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Itinerary</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Departure Date</th>
+      <th>Total Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>itinerary_0</td>
+      <td>PDX</td>
+      <td>LCA</td>
+      <td>2024-03-10</td>
+      <td>926.2</td>
+    </tr>
+    <tr>
+      <td>itinerary_1</td>
+      <td>PDX</td>
+      <td>LCA</td>
+      <td>2024-03-10</td>
+      <td>926.2</td>
+    </tr>
+    <tr>
+      <td>itinerary_2</td>
+      <td>PDX</td>
+      <td>LCA</td>
+      <td>2024-03-10</td>
+      <td>926.2</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    
     <ul class="news-list">
         
     </ul>
@@ -105,6 +239,24 @@
   </thead>
   <tbody>
     <tr>
+      <td>2023-12-21</td>
+      <td>72.7000</td>
+      <td>73.4600</td>
+      <td>72.2800</td>
+      <td>73.4100</td>
+      <td>3351813</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
+      <td>2023-12-20</td>
+      <td>74.3300</td>
+      <td>74.4625</td>
+      <td>72.0500</td>
+      <td>72.2100</td>
+      <td>4532560</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
       <td>2023-12-19</td>
       <td>74.7300</td>
       <td>75.2500</td>
@@ -114,22 +266,22 @@
       <td>CNC</td>
     </tr>
     <tr>
-      <td>2023-12-18</td>
-      <td>74.4900</td>
-      <td>74.8900</td>
-      <td>73.9100</td>
-      <td>74.7900</td>
-      <td>3635313</td>
-      <td>CNC</td>
+      <td>2023-12-21</td>
+      <td>7.4500</td>
+      <td>7.7499</td>
+      <td>7.4500</td>
+      <td>7.7000</td>
+      <td>33171</td>
+      <td>UHG</td>
     </tr>
     <tr>
-      <td>2023-12-15</td>
-      <td>74.9000</td>
-      <td>75.4250</td>
-      <td>72.8600</td>
-      <td>74.2200</td>
-      <td>7372588</td>
-      <td>CNC</td>
+      <td>2023-12-20</td>
+      <td>7.2490</td>
+      <td>7.5100</td>
+      <td>7.2400</td>
+      <td>7.4900</td>
+      <td>118861</td>
+      <td>UHG</td>
     </tr>
     <tr>
       <td>2023-12-19</td>
@@ -141,22 +293,22 @@
       <td>UHG</td>
     </tr>
     <tr>
-      <td>2023-12-18</td>
-      <td>7.2400</td>
-      <td>7.2400</td>
-      <td>6.7600</td>
-      <td>6.8900</td>
-      <td>10070</td>
-      <td>UHG</td>
+      <td>2023-12-21</td>
+      <td>8.7800</td>
+      <td>8.9100</td>
+      <td>8.7500</td>
+      <td>8.9000</td>
+      <td>167798</td>
+      <td>GCMG</td>
     </tr>
     <tr>
-      <td>2023-12-15</td>
-      <td>7.2500</td>
-      <td>7.5200</td>
-      <td>6.9001</td>
-      <td>7.2200</td>
-      <td>55119</td>
-      <td>UHG</td>
+      <td>2023-12-20</td>
+      <td>8.7900</td>
+      <td>8.8800</td>
+      <td>8.7100</td>
+      <td>8.7200</td>
+      <td>211520</td>
+      <td>GCMG</td>
     </tr>
     <tr>
       <td>2023-12-19</td>
@@ -168,22 +320,22 @@
       <td>GCMG</td>
     </tr>
     <tr>
-      <td>2023-12-18</td>
-      <td>8.9600</td>
-      <td>8.9700</td>
-      <td>8.8100</td>
-      <td>8.9000</td>
-      <td>168800</td>
-      <td>GCMG</td>
+      <td>2023-12-21</td>
+      <td>77.6000</td>
+      <td>78.7600</td>
+      <td>77.5300</td>
+      <td>78.6200</td>
+      <td>9138904</td>
+      <td>CVS</td>
     </tr>
     <tr>
-      <td>2023-12-15</td>
-      <td>8.9300</td>
-      <td>9.0100</td>
-      <td>8.8400</td>
-      <td>8.9000</td>
-      <td>1177788</td>
-      <td>GCMG</td>
+      <td>2023-12-20</td>
+      <td>76.6200</td>
+      <td>78.4700</td>
+      <td>76.1500</td>
+      <td>77.2400</td>
+      <td>13111982</td>
+      <td>CVS</td>
     </tr>
     <tr>
       <td>2023-12-19</td>
@@ -195,22 +347,22 @@
       <td>CVS</td>
     </tr>
     <tr>
-      <td>2023-12-18</td>
-      <td>75.0000</td>
-      <td>75.2150</td>
-      <td>74.4100</td>
-      <td>74.8800</td>
-      <td>7785944</td>
-      <td>CVS</td>
+      <td>2023-12-21</td>
+      <td>297.0000</td>
+      <td>299.2800</td>
+      <td>295.9200</td>
+      <td>297.2400</td>
+      <td>1089785</td>
+      <td>CI</td>
     </tr>
     <tr>
-      <td>2023-12-15</td>
-      <td>73.6600</td>
-      <td>74.6200</td>
-      <td>73.0400</td>
-      <td>74.4300</td>
-      <td>12916091</td>
-      <td>CVS</td>
+      <td>2023-12-20</td>
+      <td>297.0000</td>
+      <td>299.3900</td>
+      <td>294.5600</td>
+      <td>295.8500</td>
+      <td>2105512</td>
+      <td>CI</td>
     </tr>
     <tr>
       <td>2023-12-19</td>
@@ -221,45 +373,27 @@
       <td>1180671</td>
       <td>CI</td>
     </tr>
-    <tr>
-      <td>2023-12-18</td>
-      <td>291.4900</td>
-      <td>293.7600</td>
-      <td>288.8750</td>
-      <td>292.0700</td>
-      <td>1364725</td>
-      <td>CI</td>
-    </tr>
-    <tr>
-      <td>2023-12-15</td>
-      <td>297.0200</td>
-      <td>297.5699</td>
-      <td>288.9300</td>
-      <td>290.5000</td>
-      <td>4357021</td>
-      <td>CI</td>
-    </tr>
   </tbody>
 </table>
     </div>
     <section class="food">
         <h2>Food for today:</h2>
         <p><strong>Breakfast (random):</strong> protein shake</p>
-        <p><strong>Lunch (random):</strong> Paris Baguette</p>
-        <p><strong>Dinner (random):</strong> fast food</p>
+        <p><strong>Lunch (random):</strong> sushi</p>
+        <p><strong>Dinner (random):</strong> Mexican</p>
     </section>
     <section class="tasks">
         <h2>Task for today:</h2>
-        <p><strong>Task (random):</strong> walk</p>
+        <p><strong>Task (random):</strong> send Lindsay flowers</p>
     </section>
     <section class="quotes">
         <h2>Turkish Quote</h2>
-        <p><strong>Quote:</strong> Damlaya damlaya göl olur.</p>
-        <p><strong>Translation:</strong> Drop by drop, it becomes a lake.</p>
+        <p><strong>Quote:</strong> Kedi uzanamadığı ciğere mundar der.</p>
+        <p><strong>Translation:</strong> The cat calls the liver it can't reach rotten.</p>
     </section>
     <section class="affirmations">
         <h2>Affirmations</h2>
-        <p><strong>Affirmation:</strong> I am healthy, optimistic, and happy.</p>
+        <p><strong>Affirmation:</strong> My cats are happy and healthy</p>
     
     
     <div class="football-odds">
@@ -277,84 +411,84 @@
   </thead>
   <tbody>
     <tr>
-      <td>2023-12-20T07:00:00+00:00</td>
-      <td>Tainan City vs Ming Chuan University</td>
-      <td>Taiwan Football Premier League</td>
-      <td>1.11</td>
-      <td>8.00</td>
-      <td>14.50</td>
+      <td>2023-12-22T19:00:00+00:00</td>
+      <td>Forest Green vs Gillingham</td>
+      <td>League Two</td>
+      <td>2.70</td>
+      <td>3.40</td>
+      <td>2.55</td>
     </tr>
     <tr>
-      <td>2023-12-20T17:00:00+00:00</td>
-      <td>Bnei Sakhnin vs Hapoel Haifa</td>
-      <td>Ligat Ha'al</td>
-      <td>2.80</td>
-      <td>3.20</td>
-      <td>2.35</td>
+      <td>2023-12-22T19:00:00+00:00</td>
+      <td>De Graafschap vs Jong PSV</td>
+      <td>Eerste Divisie</td>
+      <td>1.55</td>
+      <td>4.33</td>
+      <td>4.60</td>
     </tr>
     <tr>
-      <td>2023-12-20T17:30:00+00:00</td>
-      <td>Cercle Brugge vs Kortrijk</td>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>RWDM vs Club Brugge KV</td>
       <td>Jupiler Pro League</td>
-      <td>1.28</td>
-      <td>5.75</td>
-      <td>10.00</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T17:45:00+00:00</td>
-      <td>Maccabi Netanya vs Beitar Jerusalem</td>
-      <td>Ligat Ha'al</td>
-      <td>2.05</td>
-      <td>3.20</td>
-      <td>3.40</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T18:00:00+00:00</td>
-      <td>Cracovia Krakow vs Legia Warszawa</td>
-      <td>Ekstraklasa</td>
-      <td>3.00</td>
-      <td>3.20</td>
-      <td>2.30</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T18:00:00+00:00</td>
-      <td>Maccabi Haifa vs Ashdod</td>
-      <td>Ligat Ha'al</td>
-      <td>1.36</td>
-      <td>4.75</td>
-      <td>7.00</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T18:00:00+00:00</td>
-      <td>Barcelona vs Almeria</td>
-      <td>La Liga</td>
-      <td>1.15</td>
-      <td>8.75</td>
-      <td>16.00</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T18:30:00+00:00</td>
-      <td>Hapoel Beer Sheva vs Maccabi Tel Aviv</td>
-      <td>Ligat Ha'al</td>
-      <td>3.90</td>
-      <td>3.40</td>
-      <td>1.83</td>
-    </tr>
-    <tr>
-      <td>2023-12-20T20:30:00+00:00</td>
-      <td>Athletic Club vs Las Palmas</td>
-      <td>La Liga</td>
-      <td>1.35</td>
+      <td>8.25</td>
       <td>5.00</td>
-      <td>8.75</td>
+      <td>1.37</td>
     </tr>
     <tr>
-      <td>2023-12-20T20:30:00+00:00</td>
-      <td>Villarreal vs Celta Vigo</td>
-      <td>La Liga</td>
-      <td>2.40</td>
-      <td>3.40</td>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Cambridge United vs Exeter City</td>
+      <td>League One</td>
+      <td>2.00</td>
+      <td>3.20</td>
+      <td>3.75</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Colchester vs Salford City</td>
+      <td>League Two</td>
+      <td>2.20</td>
+      <td>3.50</td>
+      <td>2.95</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Crawley Town vs AFC Wimbledon</td>
+      <td>League Two</td>
+      <td>3.30</td>
+      <td>3.50</td>
+      <td>2.05</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Crewe vs Barrow</td>
+      <td>League Two</td>
+      <td>2.50</td>
+      <td>3.50</td>
+      <td>2.70</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Doncaster vs Bradford</td>
+      <td>League Two</td>
       <td>2.87</td>
+      <td>3.20</td>
+      <td>2.40</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T19:45:00+00:00</td>
+      <td>Stockport County vs Notts County</td>
+      <td>League Two</td>
+      <td>1.61</td>
+      <td>4.10</td>
+      <td>4.80</td>
+    </tr>
+    <tr>
+      <td>2023-12-22T20:00:00+00:00</td>
+      <td>Aston Villa vs Sheffield Utd</td>
+      <td>Premier League</td>
+      <td>1.25</td>
+      <td>6.25</td>
+      <td>11.00</td>
     </tr>
   </tbody>
 </table>

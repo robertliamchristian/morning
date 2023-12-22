@@ -63,13 +63,16 @@ def extract_fixtures_data(fixtures_data):
 def fetch_football_odds(api_key, date=dt.now().strftime("%Y-%m-%d")):
     # Fetch odds data
     odds_data = fetch_odds(api_key, date)
+    print(odds_data)
     # Fetch fixtures data
     fixtures_data = fetch_fixtures(api_key, date)
+    print(fixtures_data)
 
     # Extract relevant data from odds and fixtures
     odds_extracted = extract_odds_data(odds_data)
+    print(odds_extracted)
     fixtures_extracted = extract_fixtures_data(fixtures_data)
-
+    print(fixtures_extracted)
     # Convert to DataFrames
     odds_df = pd.DataFrame(odds_extracted)
     fixtures_df = pd.DataFrame(fixtures_extracted)
@@ -83,3 +86,6 @@ def fetch_football_odds(api_key, date=dt.now().strftime("%Y-%m-%d")):
     final_df = final_df[['date', 'Match', 'league_name', 'home_odds', 'draw_odds', 'away_odds']]
 
     return final_df
+
+
+
