@@ -13,6 +13,7 @@ from stock import get_daily_stock_data
 from get_soccer import fetch_football_odds
 from ny_flights import fetch_ny_flights
 from cy_flights import fetch_cy_flights
+from npr import get_npr_data
 
 
 
@@ -31,6 +32,7 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
     football_odds_data = fetch_football_odds(football_api_key)
     # Fetch calendar events
     calendar_events = fetch_calendar_events(calendar_api_key, calendar_id)
+    l_calendar_events = fetch_calendar_events(calendar_api_key, calendar_id2)
     # Fetch stock data
     daily_stock_data = get_daily_stock_data()
     # Fetch date information
@@ -43,6 +45,10 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
     ny_flights_html = ny_flights_data.to_html(index=False, classes='flights-table')
     cy_flights_data = fetch_cy_flights()
     cy_flights_html = cy_flights_data.to_html(index=False, classes='flights-table')
+    npr_data = get_npr_data()
+    npr_data_html = npr_data.to_html(index=False, classes='npr-table')  
+
+    
 
     # Fetch news daa
     #news_data = fetch_news_data()
@@ -68,7 +74,8 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
         'affirmation': affirmation,
         'ny_flights': ny_flights_html,
         'cy_flights': cy_flights_html,
-        #'news_data': news_data.to_html(index=False, classes='news-table'),
+        'l_calendar_events': l_calendar_events.to_html(index=False, classes='calendar-table'),
+        'npr_data': npr_data_html,
         
     }
         
@@ -82,5 +89,6 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
 weather_api_key = '89fbedb87c83a9faf12a1319c4df142e'
 calendar_api_key = 'AIzaSyBfw_KuFQwYvCgIm9ZDdJGuvqAKUWzmw5Q'
 calendar_id = 'robertliamchristian@gmail.com'
+calendar_id2 = 'lindsay.hooker@gmail.com'
 football_api_key = 'd49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84'
 morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_key)

@@ -68,8 +68,12 @@
         {% endfor %}
     </ul>-->
     <section class="calendar">
-        <h2>Calendar Events</h2>
+        <h2>Calendar</h2>
         {{ calendar_events | safe }}
+    </section>
+    <section class="calendar">
+        <h2>Lindsay Calendar</h2>
+        {{ l_calendar_events | safe }}
     </section>
     <br>
     <div>
@@ -82,11 +86,10 @@
         {{ cy_flights|safe }}
     </div>
     
-    <ul class="news-list">
-        {% for news_item in news_data %}
-            <li>{{ news_item.title }}</li>
-        {% endfor %}
-    </ul>
+    <div>
+        <h2>NPR News</h2>
+        {{ npr_data|safe }}
+    </div>
     <h2>Stocks</h2>
     <div>
         {{ daily_stock_data | safe }}
