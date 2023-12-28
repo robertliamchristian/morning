@@ -1,0 +1,2 @@
+cd /Users/robbiechristian/Documents/Programming/Morning
+/Users/robbiechristian/Documents/Programming/Morning/app.py

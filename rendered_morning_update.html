@@ -11,6 +11,11 @@
             font: Helvetica;
         }
 
+        div {
+            border-color: #ddd;
+            border-width: 1px;
+        }
+
         #headers {
             text-align: left;
         }
@@ -50,29 +55,65 @@
 </head>
 <body>
     <h1>Good Morning, Robbie!</h1>
-    <h2><strong>Date:</strong> Sunday, December 24, 2023</h2>
+    <h2> Plan: </h2>
+    <ol>
+        <li>Count Calories</li>
+        <li>Portion your meals, even when you order too much delivery</li>
+        <li>5 minutes of any kind of exercise a day</li>
+        <li>Meditation every day</li>
+        <li>One sugar item a day</li>
+    </ol>
+    <section class="tasks">
+        <h2>Task for today:</h2>
+        <p><strong>Task (random):</strong> call a friend</p>
+    </section>
+    <h2><strong>Date:</strong> Thursday, December 28, 2023</h2>
     <div id="headers"><h3>Weather in Portland, OR</h3></div>
-    <p><strong>High:</strong> 36.73°F</p>
-    <p><strong>Low:</strong> 30.33°F</p> <!-- Ensure you have temp_low in your context -->
-    <p><strong>Conditions:</strong> clear sky</p>
-    <p><strong>Sunrise:</strong> 07:49</p> <!-- Ensure you have sunrise in your context -->
-    <p><strong>Sunset:</strong> 16:31</p> <!-- Ensure you have sunset in your context -->
-    <p><strong>Days until New Year's:</strong> 7</p>
-    <p><strong>Days until Your Birthday:</strong> 42</p>
-    <p><strong>Days until Lindsay's Birthday:</strong> 164</p>
-    <!--<h2>News</h2>
-    
-    <ul>
-        
-    </ul>-->
+    <p><strong>High:</strong> 45°F</p>
+    <p><strong>Low:</strong> 42.57°F</p> <!-- Ensure you have temp_low in your context -->
+    <p><strong>Conditions:</strong> light rain</p>
+    <p><strong>Sunrise:</strong> 07:50</p> <!-- Ensure you have sunrise in your context -->
+    <p><strong>Sunset:</strong> 16:33</p> <!-- Ensure you have sunset in your context -->
+    <p><strong>Days until New Year's:</strong> 3</p>
+    <p><strong>Days until Your Birthday:</strong> 38</p>
+    <p><strong>Days until Lindsay's Birthday:</strong> 160</p>
+    <section class="food">
+        <h2>Food for today:</h2>
+        <p><strong>Breakfast (random):</strong> protein shake</p>
+        <p><strong>Lunch (random):</strong> Paris Baguette</p>
+        <p><strong>Dinner (random):</strong> sushi</p>
+    </section>
     <section class="calendar">
         <h2>Calendar</h2>
         <table border="1" class="dataframe calendar-table">
   <thead>
     <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Start</th>
+      <th>End</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Psychiatry</td>
+      <td>2023-12-27T15:30:00-08:00</td>
+      <td>2023-12-27T16:30:00-08:00</td>
+    </tr>
+    <tr>
+      <td>O - Clinical Feedback</td>
+      <td>2023-12-28T07:00:00-08:00</td>
+      <td>2023-12-28T07:30:00-08:00</td>
+    </tr>
+    <tr>
+      <td>O - DA Standup</td>
+      <td>2023-12-28T08:00:00-08:00</td>
+      <td>2023-12-28T09:00:00-08:00</td>
+    </tr>
+    <tr>
+      <td>Robbie : Paul 1:1</td>
+      <td>2023-12-28T12:00:00-08:00</td>
+      <td>2023-12-28T13:00:00-08:00</td>
+    </tr>
   </tbody>
 </table>
     </section>
@@ -81,9 +122,22 @@
         <table border="1" class="dataframe calendar-table">
   <thead>
     <tr style="text-align: right;">
+      <th>Name</th>
+      <th>Start</th>
+      <th>End</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>Jen Therapy</td>
+      <td>2023-12-28T13:00:00-08:00</td>
+      <td>2023-12-28T14:00:00-08:00</td>
+    </tr>
+    <tr>
+      <td>Rose Massage</td>
+      <td>2023-12-28T15:15:00-08:00</td>
+      <td>2023-12-28T16:15:00-08:00</td>
+    </tr>
   </tbody>
 </table>
     </section>
@@ -120,56 +174,56 @@
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>196.18</td>
+      <td>243.70</td>
     </tr>
     <tr>
       <td>itinerary_3</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>238.90</td>
+      <td>247.90</td>
     </tr>
     <tr>
       <td>itinerary_4</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>238.90</td>
+      <td>247.90</td>
     </tr>
     <tr>
       <td>itinerary_5</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>243.70</td>
+      <td>248.20</td>
     </tr>
     <tr>
       <td>itinerary_6</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>246.70</td>
+      <td>248.20</td>
     </tr>
     <tr>
       <td>itinerary_7</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>246.70</td>
+      <td>255.70</td>
     </tr>
     <tr>
       <td>itinerary_8</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>248.20</td>
+      <td>255.70</td>
     </tr>
     <tr>
       <td>itinerary_9</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-01-05</td>
-      <td>248.20</td>
+      <td>257.20</td>
     </tr>
   </tbody>
 </table>
@@ -193,21 +247,21 @@
       <td>PDX</td>
       <td>LCA</td>
       <td>2024-03-10</td>
-      <td>926.2</td>
+      <td>941.3</td>
     </tr>
     <tr>
       <td>itinerary_1</td>
       <td>PDX</td>
       <td>LCA</td>
       <td>2024-03-10</td>
-      <td>926.2</td>
+      <td>941.3</td>
     </tr>
     <tr>
       <td>itinerary_2</td>
       <td>PDX</td>
       <td>LCA</td>
       <td>2024-03-10</td>
-      <td>926.2</td>
+      <td>941.3</td>
     </tr>
   </tbody>
 </table>
@@ -226,94 +280,94 @@
   </thead>
   <tbody>
     <tr>
-      <td>Sun, 24 Dec 2023 06:00:56 -0500</td>
-      <td>It's weird to be a grown-up orphan. It forced my siblings and I to reckon with faith</td>
-      <td>After my parents died, it felt like I had been robbed. I sat down with my brother and sister to talk about how losing our mom and dad made us think about religion and our own spirituality.</td>
-      <td>https://www.npr.org/2023/12/24/1214304021/religion-family-death-spirituality-parents-afterlife</td>
+      <td>Thu, 28 Dec 2023 05:01:19 -0500</td>
+      <td>A look back at some of the top political stories of 2023</td>
+      <td>From former President Donald Trump's historic mug shot to the House speaker drama, here are moments that captured the unprecedented political drama and other powerful moments that unfolded in 2023.</td>
+      <td>https://www.npr.org/2023/12/28/1219680122/year-in-politics-trump-biden-mccarthy-israel-ukraine</td>
     </tr>
     <tr>
-      <td>Sun, 24 Dec 2023 05:00:26 -0500</td>
-      <td>In their own words, new U.S. citizens look to voting in 2024</td>
-      <td>For some newly naturalized U.S. citizens in Arizona, they see voting in next year's elections as an important responsibility.</td>
-      <td>https://www.npr.org/2023/12/24/1221288961/new-citizens-voting-arizona</td>
+      <td>Thu, 28 Dec 2023 05:00:50 -0500</td>
+      <td>2023 will be the hottest year on record. Is this how it's going to be now?</td>
+      <td>Global temperatures soared past previous records this year. Scientists say it's what they expect to see as the climate keeps changing.</td>
+      <td>https://www.npr.org/2023/12/28/1221827923/2023-hottest-year-record-climate-change</td>
     </tr>
     <tr>
-      <td>Sun, 24 Dec 2023 05:00:26 -0500</td>
-      <td>The Hamas attack left many Israeli farms abandoned — some worry forever</td>
-      <td>In some of the farm communities hardest hit during the Oct. 7 attack, volunteers from Israel and around the world are arriving to fill the gap left by workers who are no longer there.</td>
-      <td>https://www.npr.org/2023/12/24/1221124833/israel-gaza-kibbutz-hamas-palestinians-farms</td>
+      <td>Thu, 28 Dec 2023 05:00:50 -0500</td>
+      <td>What is hospice care? 6 myths about this end-of-life option</td>
+      <td>Recently ex-President Jimmy Carter went into hospice, which often is for patients in the last stages of incurable diseases. Contrary to popular belief, starting hospice doesn't mean giving up on life.</td>
+      <td>https://www.npr.org/2023/12/28/1221648271/hospice-care-myths-jimmy-carter-end-of-life</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 18:28:05 -0500</td>
-      <td>Laura Lynch, founding member of The Chicks, dies at 65 in Texas car crash</td>
-      <td>The musician, who played bass and sang with the influential all-women country music band from 1989-93, was pronounced deceased on the scene.</td>
-      <td>https://www.npr.org/2023/12/23/1221456277/laura-lynch-founding-member-of-the-chicks-dies-at-65-in-texas-car-crash</td>
+      <td>Thu, 28 Dec 2023 05:00:49 -0500</td>
+      <td>Doctors are pushing Hollywood for more realistic depictions of death and dying on TV</td>
+      <td>Clinicians who work with people at the end of life say the most common television depictions of death aren't representative of what happens in the real world. They want to flip the script.</td>
+      <td>https://www.npr.org/sections/health-shots/2023/12/28/1221645389/doctors-are-pushing-hollywood-for-more-realistic-depictions-of-death-and-dying-o</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 17:22:36 -0500</td>
-      <td>You've heard of Santa, maybe even Krampus, but what about the child-eating Yule Cat?</td>
-      <td>The Icelandic folk monster, Jólakötturinn, which translates to Yule Cat, stalks the hillsides of towns looking for children to eat. But only those who aren't wearing their new Christmas clothes.</td>
-      <td>https://www.npr.org/2023/12/23/1221454825/youve-heard-of-santa-maybe-even-krampus-but-what-about-the-child-eating-yule-cat</td>
+      <td>Thu, 28 Dec 2023 05:00:20 -0500</td>
+      <td>Directors pick the soundtracks for NPR's shows. Here are their own 2023 playlists</td>
+      <td>Have you ever listened to NPR and wondered who chooses those songs you hear between stories and interviews? We've asked four directors to curate playlists and set a mood.</td>
+      <td>https://www.npr.org/2023/12/28/1220612546/music-playlist-npr-all-things-consider-wrapped-2023</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 15:12:44 -0500</td>
-      <td>Peso Pluma bests Taylor Swift, Bad Bunny for most streamed YouTube artist of 2023</td>
-      <td>The Mexican singer-songwriter racked up more than 8.5 billion views globally on the platform this year.</td>
-      <td>https://www.npr.org/2023/12/23/1221447812/peso-pluma-bests-taylor-swift-bad-bunny-for-most-streamed-youtube-artist-of-2023</td>
+      <td>Thu, 28 Dec 2023 05:00:20 -0500</td>
+      <td>The $7,500 tax credit for electric cars will see big changes in 2024. What to know</td>
+      <td>The electric vehicle tax credit will be easier to get next year — but fewer models could qualify, as the government imposes stricter eligibility requirements.</td>
+      <td>https://www.npr.org/2023/12/28/1219158071/ev-electric-vehicles-tax-credit-car-shopping-tesla-ford-vw-gm</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 13:37:30 -0500</td>
-      <td>A pro-peace Russian presidential hopeful is blocked by election commission</td>
-      <td>Yekaterina Duntsova is a former journalist-turned-politician who opposes the Ukraine war and hopes to challenge Putin, but her efforts to run stalled after election officials rejected her nomination.</td>
-      <td>https://www.npr.org/2023/12/23/1221445736/a-pro-peace-russian-presidential-hopeful-is-blocked-by-election-commission</td>
+      <td>Thu, 28 Dec 2023 05:00:19 -0500</td>
+      <td>Actors, musicians, writers and artists we lost in 2023</td>
+      <td>Giants of the arts world left us this year: We look back on the legacies of Harry Belafonte, Tina Turner, Sinéad O'Connor, Paul Reubens (aka Pee-wee Herman), Richard Roundtree, Norman Lear and more.</td>
+      <td>https://www.npr.org/2023/12/28/1217683485/died-in-2023</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 11:57:56 -0500</td>
-      <td>FDA says watch out for fake Ozempic, a diabetes drug used by many for weight loss</td>
-      <td>Thousands of fake units of the drug have been seized by the FDA, which is working alongside the manufacturer to test the counterfeit products for safety concerns.</td>
-      <td>https://www.npr.org/2023/12/23/1221442262/counterfeit-ozempic-fda-weight-loss</td>
+      <td>Thu, 28 Dec 2023 02:58:19 -0500</td>
+      <td>U.S. announces new weapons package for Ukraine, as Congress is stalled on aid bill</td>
+      <td>The U.S. announced military aid of up to $250 million. It could be the final package of military aid to Ukraine unless Congress approves supplemental funding legislation now stalled on Capitol Hill.</td>
+      <td>https://www.npr.org/2023/12/28/1221941031/us-announces-new-weapons-package-ukraine-congress-stalled-aid-bill</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 10:38:59 -0500</td>
-      <td>How the real-life Rudolphs get enough rest: Sleep while you chew!</td>
-      <td>Scientists say reindeer seem to sleep while they chew, allowing them to forage all day in the summertime and still get enough sleep.</td>
-      <td>https://www.npr.org/2023/12/23/1221383185/how-the-real-life-rudolphs-get-enough-rest-sleep-while-you-chew</td>
+      <td>Wed, 27 Dec 2023 18:48:00 -0500</td>
+      <td>In talks with the U.S., Mexico's priority appears to be opening border crossings</td>
+      <td>Both sides in the talks face pressure to reach an agreement after past steps like limiting direct travel into Mexico or deporting some migrants failed to stop the influx.</td>
+      <td>https://www.npr.org/2023/12/27/1221916672/in-talks-with-the-u-s-mexicos-priority-appears-to-be-opening-border-crossings</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 07:01:21 -0500</td>
-      <td>Who cooks the most in your home? NPR readers weigh in</td>
-      <td>While a recent survey says women around the world cook at home about twice as often as men do, a good number of our readers said: "Not in my house!" We've got a feast of stories and opinions.</td>
-      <td>https://www.npr.org/sections/health-shots/2023/12/23/1221011562/who-cooks-the-most-in-your-home-npr-readers-weigh-in</td>
+      <td>Wed, 27 Dec 2023 17:23:10 -0500</td>
+      <td>Jacques Delors, architect of the modern EU and 'Mr. Europe,' dies at 98</td>
+      <td>A Paris bank messenger's son, Delors became the visionary and builder of a more unified Europe in his momentous decade as chief executive of the European Union.</td>
+      <td>https://www.npr.org/2023/12/27/1221905091/jacques-delors-eu-european-union-dies</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 06:00:21 -0500</td>
-      <td>2023 was a year of big anniversaries</td>
-      <td>In 2023, we marked 20 years since the Iraq War, 50 years since the birth of hip-hop, and 60 years since the JFK assassination. Here's a roundup of historical events we wrote about over the past year.</td>
-      <td>https://www.npr.org/2023/12/23/1218891428/2023-best-history-stories-year-end</td>
+      <td>Wed, 27 Dec 2023 15:34:58 -0500</td>
+      <td>U.S. appeals court grants Apple's request to pause smartwatch import ban</td>
+      <td>The stay temporarily halts an import ban on some watches as Apple appeals a U.S. International Trade Commission ruling that it infringed on the patents of medical technology company Masimo.</td>
+      <td>https://www.npr.org/2023/12/27/1221859892/apple-smartwatch-patent-ban-masimo</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 05:01:21 -0500</td>
-      <td>In the West Bank, Palestinian olive farmers fear for the worst in this year's harvest</td>
-      <td>Usually at this time of year, Palestinian olive farmers in the West Bank are hard at work in their groves. But because of the war in Gaza, many have not been able to access their land.</td>
-      <td>https://www.npr.org/2023/12/23/1220073353/palestinian-olive-harvest-west-bank-israel-hamas-war</td>
+      <td>Wed, 27 Dec 2023 15:02:04 -0500</td>
+      <td>Two weeks in Gaza, through one Israeli soldier's eyes</td>
+      <td>A reservist serving in a logistics support role for his combat unit reflects on his first weeks stationed in Gaza. He's one of hundreds of thousands of reservists called up since Hamas' Oct. 7 attack.</td>
+      <td>https://www.npr.org/2023/12/27/1219008604/israel-military-service-soldier-gaza-hamas-war</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 05:00:52 -0500</td>
-      <td>A next big ballot fight over abortion could come to Arizona</td>
-      <td>Abortion access advocates are collecting signatures needed to put a measure on Arizona's 2024 ballot. Democrats hope the initiative could drive turnout in the swing state.</td>
-      <td>https://www.npr.org/2023/12/23/1220693319/abortion-ballot-measure-arizona</td>
+      <td>Wed, 27 Dec 2023 14:25:27 -0500</td>
+      <td>Detroit Pistons set an NBA record with 27th straight loss</td>
+      <td>The Pistons have set an NBA record for the longest losing streak in a single season, after falling to the Brooklyn Nets 118-112 Tuesday night.</td>
+      <td>https://www.npr.org/2023/12/27/1221824796/detroit-pistons-nba-record-losing-streak</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 05:00:51 -0500</td>
-      <td>A naturalist finds hope despite climate change in an era he calls 'The End of Eden'</td>
-      <td>South African naturalist Adam Welz has traveled the world, documenting the profound impact of climate change on wild species. He says his research has convinced him despair isn't the answer.</td>
-      <td>https://www.npr.org/2023/12/23/1214002178/naturalist-looks-for-hope-despite-climate-change</td>
+      <td>Wed, 27 Dec 2023 13:47:00 -0500</td>
+      <td>'New York Times' sues ChatGPT creator OpenAI, Microsoft, for copyright infringement</td>
+      <td>The &lt;em&gt;Times&lt;/em&gt; is the first major news publisher to take OpenAI to court over the use of its copyright material in its popular chatbot. The suit follows months of tense negotiations between the two sides.</td>
+      <td>https://www.npr.org/2023/12/27/1221821750/new-york-times-sues-chatgpt-openai-microsoft-for-copyright-infringement</td>
     </tr>
     <tr>
-      <td>Sat, 23 Dec 2023 05:00:21 -0500</td>
-      <td>The war in Gaza is a big story on campus. These student reporters aren't shying away</td>
-      <td>Tensions have been high on college campuses ever since the Oct. 7 Hamas attack on Israel, and the resulting war in Gaza. For student journalists, it's likely the biggest story they've ever covered.</td>
-      <td>https://www.npr.org/2023/12/23/1219387023/college-campus-student-israel-gaza</td>
+      <td>Wed, 27 Dec 2023 13:07:16 -0500</td>
+      <td>Vivek Ramaswamy's campaign has slowed TV ad spending ahead of the Iowa caucus</td>
+      <td>Less than three weeks ahead of the Republican field's first primary contest, candidates are strategizing how to stretch limited resources to win over last minute voters in Iowa.</td>
+      <td>https://www.npr.org/2023/12/27/1221828944/vivek-ramaswamys-campaign-has-slowed-tv-ad-spending-ahead-of-the-iowa-caucus</td>
     </tr>
   </tbody>
 </table>
@@ -334,6 +388,24 @@
   </thead>
   <tbody>
     <tr>
+      <td>2023-12-27</td>
+      <td>73.7500</td>
+      <td>73.8100</td>
+      <td>72.9500</td>
+      <td>73.4300</td>
+      <td>2291081</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
+      <td>2023-12-26</td>
+      <td>73.1700</td>
+      <td>73.9100</td>
+      <td>73.0900</td>
+      <td>73.6500</td>
+      <td>1507623</td>
+      <td>CNC</td>
+    </tr>
+    <tr>
       <td>2023-12-22</td>
       <td>73.5600</td>
       <td>73.6150</td>
@@ -343,22 +415,22 @@
       <td>CNC</td>
     </tr>
     <tr>
-      <td>2023-12-21</td>
-      <td>72.7000</td>
-      <td>73.4600</td>
-      <td>72.2800</td>
-      <td>73.4100</td>
-      <td>3351813</td>
-      <td>CNC</td>
+      <td>2023-12-27</td>
+      <td>8.1300</td>
+      <td>8.8000</td>
+      <td>8.1000</td>
+      <td>8.2400</td>
+      <td>63249</td>
+      <td>UHG</td>
     </tr>
     <tr>
-      <td>2023-12-20</td>
-      <td>74.3300</td>
-      <td>74.4625</td>
-      <td>72.0500</td>
-      <td>72.2100</td>
-      <td>4532560</td>
-      <td>CNC</td>
+      <td>2023-12-26</td>
+      <td>8.2500</td>
+      <td>8.6300</td>
+      <td>8.2100</td>
+      <td>8.3000</td>
+      <td>65337</td>
+      <td>UHG</td>
     </tr>
     <tr>
       <td>2023-12-22</td>
@@ -370,22 +442,22 @@
       <td>UHG</td>
     </tr>
     <tr>
-      <td>2023-12-21</td>
-      <td>7.4500</td>
-      <td>7.7499</td>
-      <td>7.4500</td>
-      <td>7.7000</td>
-      <td>33171</td>
-      <td>UHG</td>
+      <td>2023-12-27</td>
+      <td>9.0400</td>
+      <td>9.2000</td>
+      <td>8.9700</td>
+      <td>9.1800</td>
+      <td>250871</td>
+      <td>GCMG</td>
     </tr>
     <tr>
-      <td>2023-12-20</td>
-      <td>7.2490</td>
-      <td>7.5100</td>
-      <td>7.2400</td>
-      <td>7.4900</td>
-      <td>118861</td>
-      <td>UHG</td>
+      <td>2023-12-26</td>
+      <td>8.9300</td>
+      <td>9.0650</td>
+      <td>8.9300</td>
+      <td>9.0500</td>
+      <td>97624</td>
+      <td>GCMG</td>
     </tr>
     <tr>
       <td>2023-12-22</td>
@@ -397,22 +469,22 @@
       <td>GCMG</td>
     </tr>
     <tr>
-      <td>2023-12-21</td>
-      <td>8.7800</td>
-      <td>8.9100</td>
-      <td>8.7500</td>
-      <td>8.9000</td>
-      <td>167798</td>
-      <td>GCMG</td>
+      <td>2023-12-27</td>
+      <td>78.6700</td>
+      <td>79.2200</td>
+      <td>78.5100</td>
+      <td>78.8200</td>
+      <td>4075431</td>
+      <td>CVS</td>
     </tr>
     <tr>
-      <td>2023-12-20</td>
-      <td>8.7900</td>
-      <td>8.8800</td>
-      <td>8.7100</td>
-      <td>8.7200</td>
-      <td>211520</td>
-      <td>GCMG</td>
+      <td>2023-12-26</td>
+      <td>78.6300</td>
+      <td>79.2550</td>
+      <td>78.5000</td>
+      <td>79.0000</td>
+      <td>4069018</td>
+      <td>CVS</td>
     </tr>
     <tr>
       <td>2023-12-22</td>
@@ -424,22 +496,22 @@
       <td>CVS</td>
     </tr>
     <tr>
-      <td>2023-12-21</td>
-      <td>77.6000</td>
-      <td>78.7600</td>
-      <td>77.5300</td>
-      <td>78.6200</td>
-      <td>9138904</td>
-      <td>CVS</td>
+      <td>2023-12-27</td>
+      <td>299.7700</td>
+      <td>300.9800</td>
+      <td>297.9500</td>
+      <td>299.1400</td>
+      <td>990981</td>
+      <td>CI</td>
     </tr>
     <tr>
-      <td>2023-12-20</td>
-      <td>76.6200</td>
-      <td>78.4700</td>
-      <td>76.1500</td>
-      <td>77.2400</td>
-      <td>13111982</td>
-      <td>CVS</td>
+      <td>2023-12-26</td>
+      <td>297.2400</td>
+      <td>300.8500</td>
+      <td>296.0800</td>
+      <td>300.1200</td>
+      <td>752499</td>
+      <td>CI</td>
     </tr>
     <tr>
       <td>2023-12-22</td>
@@ -450,47 +522,17 @@
       <td>1167473</td>
       <td>CI</td>
     </tr>
-    <tr>
-      <td>2023-12-21</td>
-      <td>297.0000</td>
-      <td>299.2800</td>
-      <td>295.9200</td>
-      <td>297.2400</td>
-      <td>1089785</td>
-      <td>CI</td>
-    </tr>
-    <tr>
-      <td>2023-12-20</td>
-      <td>297.0000</td>
-      <td>299.3900</td>
-      <td>294.5600</td>
-      <td>295.8500</td>
-      <td>2105512</td>
-      <td>CI</td>
-    </tr>
   </tbody>
 </table>
     </div>
-    <section class="food">
-        <h2>Food for today:</h2>
-        <p><strong>Breakfast (random):</strong> protein shake</p>
-        <p><strong>Lunch (random):</strong> Paris Baguette</p>
-        <p><strong>Dinner (random):</strong> Paris Baguette</p>
-    </section>
-    <section class="tasks">
-        <h2>Task for today:</h2>
-        <p><strong>Task (random):</strong> call a friend</p>
-    </section>
     <section class="quotes">
         <h2>Turkish Quote</h2>
-        <p><strong>Quote:</strong> Kedi uzanamadığı ciğere mundar der.</p>
-        <p><strong>Translation:</strong> The cat calls the liver it can't reach rotten.</p>
+        <p><strong>Quote:</strong> Aç kurt bile komşusunu yemez.</p>
+        <p><strong>Translation:</strong> Even a hungry wolf won’t eat its neighbor.</p>
     </section>
     <section class="affirmations">
         <h2>Affirmations</h2>
-        <p><strong>Affirmation:</strong> My immune system is strong and keeps me safe.</p>
-    
-    
+        <p><strong>Affirmation:</strong> I deserve to feel healthy and vibrant.</p>
     <div class="football-odds">
         <h2>Today's Football Odds</h2>
         <table border="1" class="dataframe football-odds-table">
@@ -506,88 +548,94 @@
   </thead>
   <tbody>
     <tr>
-      <td>2023-12-24T10:30:00+00:00</td>
-      <td>Lamphun Warrior vs Trat FC</td>
+      <td>2023-12-28T11:00:00+00:00</td>
+      <td>Prachuap vs Buriram United</td>
       <td>Thai League 1</td>
-      <td>1.66</td>
-      <td>3.70</td>
       <td>4.00</td>
+      <td>3.70</td>
+      <td>1.66</td>
     </tr>
     <tr>
-      <td>2023-12-24T11:30:00+00:00</td>
-      <td>Bangkok United vs Police Tero</td>
+      <td>2023-12-28T12:00:00+00:00</td>
+      <td>Chonburi FC vs Bangkok United</td>
       <td>Thai League 1</td>
-      <td>1.18</td>
-      <td>6.50</td>
-      <td>10.50</td>
+      <td>4.10</td>
+      <td>3.70</td>
+      <td>1.65</td>
     </tr>
     <tr>
-      <td>2023-12-24T12:00:00+00:00</td>
-      <td>Bangkok Glass vs Nakhon Pathom</td>
+      <td>2023-12-28T12:00:00+00:00</td>
+      <td>Bangkok Glass vs Chiangrai United</td>
       <td>Thai League 1</td>
-      <td>1.30</td>
-      <td>5.00</td>
-      <td>7.50</td>
-    </tr>
-    <tr>
-      <td>2023-12-24T12:45:00+00:00</td>
-      <td>Sharjah FC vs Ajman</td>
-      <td>Pro League</td>
-      <td>1.38</td>
-      <td>4.60</td>
-      <td>5.75</td>
-    </tr>
-    <tr>
-      <td>2023-12-24T12:45:00+00:00</td>
-      <td>Al Bataeh vs Al Ain</td>
-      <td>Pro League</td>
-      <td>7.75</td>
+      <td>1.44</td>
+      <td>4.20</td>
       <td>5.50</td>
-      <td>1.26</td>
     </tr>
     <tr>
-      <td>2023-12-24T13:00:00+00:00</td>
-      <td>Wolves vs Chelsea</td>
+      <td>2023-12-28T13:00:00+00:00</td>
+      <td>Kitara vs Arua Hill</td>
       <td>Premier League</td>
-      <td>3.50</td>
-      <td>3.50</td>
-      <td>2.05</td>
+      <td>1.40</td>
+      <td>4.00</td>
+      <td>6.50</td>
     </tr>
     <tr>
-      <td>2023-12-24T15:30:00+00:00</td>
-      <td>Al Khaleej vs Al Wahda FC</td>
-      <td>Pro League</td>
-      <td>6.25</td>
-      <td>4.75</td>
-      <td>1.36</td>
-    </tr>
-    <tr>
-      <td>2023-12-24T15:30:00+00:00</td>
-      <td>Shabab Al Ahli Dubai vs Al-Wasl FC</td>
-      <td>Pro League</td>
-      <td>2.30</td>
-      <td>3.40</td>
-      <td>2.50</td>
-    </tr>
-    <tr>
-      <td>2023-12-24T18:00:00+00:00</td>
-      <td>Maccabi Petah Tikva vs Maccabi Tel Aviv</td>
-      <td>Ligat Ha'al</td>
-      <td>8.25</td>
-      <td>5.25</td>
-      <td>1.29</td>
-    </tr>
-    <tr>
-      <td>2023-12-24T18:30:00+00:00</td>
-      <td>Hapoel Hadera vs Maccabi Haifa</td>
-      <td>Ligat Ha'al</td>
-      <td>7.75</td>
+      <td>2023-12-28T13:00:00+00:00</td>
+      <td>BUL vs Busoga United</td>
+      <td>Premier League</td>
+      <td>1.18</td>
       <td>5.75</td>
-      <td>1.28</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <td>2023-12-28T15:00:00+00:00</td>
+      <td>Al-Ettifaq vs Al-Hazm</td>
+      <td>Pro League</td>
+      <td>1.57</td>
+      <td>4.00</td>
+      <td>5.25</td>
+    </tr>
+    <tr>
+      <td>2023-12-28T15:00:00+00:00</td>
+      <td>Al Riyadh vs Damac</td>
+      <td>Pro League</td>
+      <td>5.50</td>
+      <td>4.00</td>
+      <td>1.57</td>
+    </tr>
+    <tr>
+      <td>2023-12-28T19:30:00+00:00</td>
+      <td>Brighton vs Tottenham</td>
+      <td>Premier League</td>
+      <td>2.55</td>
+      <td>3.80</td>
+      <td>2.45</td>
+    </tr>
+    <tr>
+      <td>2023-12-28T20:15:00+00:00</td>
+      <td>Arsenal vs West Ham</td>
+      <td>Premier League</td>
+      <td>1.34</td>
+      <td>5.25</td>
+      <td>8.50</td>
+    </tr>
+    <tr>
+      <td>2023-12-28T20:15:00+00:00</td>
+      <td>Estrela vs Arouca</td>
+      <td>Primeira Liga</td>
+      <td>2.65</td>
+      <td>3.25</td>
+      <td>2.55</td>
     </tr>
   </tbody>
 </table>
     </div>
+    <p>You can do this! You can lose weight and be healthy and feel young. You can be happy
+        and feel like there is meaning in your life. You are strong and capable of very difficult
+        things, and just because things have been hard doesn't mean they always will be.
+    </p>
+    
+    
     
     
     </body>

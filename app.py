@@ -18,6 +18,7 @@ from npr import get_npr_data
 
 
 
+
 def render_template(context):
     file_loader = FileSystemLoader('templates')
     env = Environment(loader=file_loader)
@@ -92,3 +93,4 @@ calendar_id = 'robertliamchristian@gmail.com'
 calendar_id2 = 'lindsay.hooker@gmail.com'
 football_api_key = 'd49e56dcbemsh75dcc891664b5a7p1cb502jsnaab489024d84'
 morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_key)
+

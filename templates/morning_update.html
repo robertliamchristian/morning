@@ -11,6 +11,11 @@
             font: Helvetica;
         }
 
+        div {
+            border-color: #ddd;
+            border-width: 1px;
+        }
+
         #headers {
             text-align: left;
         }
@@ -51,7 +56,19 @@
 <body>
     <h1>Good Morning, Robbie!</h1>
     <h2><strong>Date:</strong> {{ today_date }}</h2>
-    <div id="headers"><h3>Weather in Portland, OR</h3></div>
+    <h2> Plan: </h2>
+    <ol>
+        <li>Count Calories</li>
+        <li>Portion your meals, even when you order too much delivery</li>
+        <li>5 minutes of any kind of exercise a day</li>
+        <li>Meditation every day</li>
+        <li>One sugar item a day</li>
+    </ol>
+    <section class="tasks">
+        <h2>Task for today:</h2>
+        <p><strong>Task (random):</strong> {{ task_for_today.task }}</p>
+    </section>
+    <div id="headers"><h2>Weather in Portland, OR</h2></div>
     <p><strong>High:</strong> {{ temp }}°F</p>
     <p><strong>Low:</strong> {{ temp_low }}°F</p> <!-- Ensure you have temp_low in your context -->
     <p><strong>Conditions:</strong> {{ weather_description }}</p>
@@ -60,13 +77,12 @@
     <p><strong>Days until New Year's:</strong> {{ days_new_year }}</p>
     <p><strong>Days until Your Birthday:</strong> {{ days_birthday }}</p>
     <p><strong>Days until Lindsay's Birthday:</strong> {{ days_lindsay_birthday }}</p>
-    <!--<h2>News</h2>
-    
-    <ul>
-        {% for article in today_news %}
-            <li><a href="{{ article['url'] }}">{{ article['title'] }}</a></li>
-        {% endfor %}
-    </ul>-->
+    <section class="food">
+        <h2>Food for today:</h2>
+        <p><strong>Breakfast (random):</strong> {{ food_for_today.breakfast }}</p>
+        <p><strong>Lunch (random):</strong> {{ food_for_today.lunch }}</p>
+        <p><strong>Dinner (random):</strong> {{ food_for_today.dinner }}</p>
+    </section>
     <section class="calendar">
         <h2>Calendar</h2>
         {{ calendar_events | safe }}
@@ -94,16 +110,6 @@
     <div>
         {{ daily_stock_data | safe }}
     </div>
-    <section class="food">
-        <h2>Food for today:</h2>
-        <p><strong>Breakfast (random):</strong> {{ food_for_today.breakfast }}</p>
-        <p><strong>Lunch (random):</strong> {{ food_for_today.lunch }}</p>
-        <p><strong>Dinner (random):</strong> {{ food_for_today.dinner }}</p>
-    </section>
-    <section class="tasks">
-        <h2>Task for today:</h2>
-        <p><strong>Task (random):</strong> {{ task_for_today.task }}</p>
-    </section>
     <section class="quotes">
         <h2>Turkish Quote</h2>
         <p><strong>Quote:</strong> {{ turkish_quote }}</p>
@@ -112,12 +118,16 @@
     <section class="affirmations">
         <h2>Affirmations</h2>
         <p><strong>Affirmation:</strong> {{ affirmation }}</p>
-    
-    
     <div class="football-odds">
         <h2>Today's Football Odds</h2>
         {{ football_odds_data|safe }}
     </div>
+    <p>You can do this! You can lose weight and be healthy and feel young. You can be happy
+        and feel like there is meaning in your life. You are strong and capable of very difficult
+        things, and just because things have been hard doesn't mean they always will be.
+    </p>
+    
+    
     
     
     </body>
