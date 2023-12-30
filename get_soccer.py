@@ -5,6 +5,8 @@ from jinja2 import Environment, FileSystemLoader
 import random
 import datetime
 from datetime import datetime as dt
+from pytz import timezone
+
 
 
 def extract_odds(bookmakers, bet_name="Match Winner"):
@@ -57,8 +59,12 @@ def extract_fixtures_data(fixtures_data):
         away_team = item['teams']['away']['name']
         league_name = item['league']['name']
         date = item['fixture']['date']
+
+        # Convert the date to Pacific Time
+        date = pd.to_datetime(date).tz_convert('US/Pacific')
+
         extracted_data.append({'fixture_id': fixture_id, 'date': date, 'home_team': home_team, 'away_team': away_team, 'league_name': league_name})
-    return extracted_data   
+    return extracted_data
     
 def fetch_football_odds(api_key, date=dt.now().strftime("%Y-%m-%d")):
     # Fetch odds data

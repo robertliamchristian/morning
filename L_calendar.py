@@ -25,4 +25,7 @@ def fetch_calendar_events(api_key, calendar_id2):
              'End': event['end'].get('dateTime', event['end'].get('date'))} 
             for event in events]
     df = pd.DataFrame(data)
+    if df.empty:
+        # If it is, create a new DataFrame with a single row containing your message
+        df = pd.DataFrame([{'Name': 'No Calendar Results Today', 'Start': '', 'End': ''}])
     return df

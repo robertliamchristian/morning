@@ -46,12 +46,17 @@ def get_daily_stock_data():
     for symbol in symbols:
         stock_data = fetch_daily_stock_data(symbol)
         if not stock_data.empty:
-            # Sort the DataFrame by date and get the top 5 rows for the symbol
-            top_5_data = stock_data.sort_values(by='Date', ascending=False).head(3)
-            all_data.append(top_5_data)
+            # Sort the DataFrame by date and get the top 3 rows for the symbol
+            top_3_data = stock_data.sort_values(by='Date', ascending=False).head(3)
+            all_data.append(top_3_data)
 
     if not all_data:
         print("No data to concatenate")
+        return pd.DataFrame()
     else:
         combined_df = pd.concat(all_data)
+
+    # Select only the 'Date', 'Close', and 'Symbol' columns
+    combined_df = combined_df[['Date', 'Close', 'Symbol']]
+
     return combined_df
