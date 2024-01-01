@@ -7,27 +7,7 @@ import datetime
 from datetime import datetime as dt
 from pytz import timezone
 
-
-
-def extract_odds(bookmakers, bet_name="Match Winner"):
-    """Extracts odds for Home, Draw, and Away from the bookmakers data."""
-    for bookmaker in bookmakers:
-        for bet in bookmaker['bets']:
-            if bet['name'] == bet_name:
-                odds = {value['value']: value['odd'] for value in bet['values']}
-                return odds.get("Home"), odds.get("Draw"), odds.get("Away")
-    return None, None, None
-
-def extract_odds_data(odds_data):
-    """Extract odds and fixture ID from the odds data."""
-    extracted_data = []
-    for item in odds_data.get('response', []):
-        fixture_id = item['fixture']['id']
-        home_odds, draw_odds, away_odds = extract_odds(item.get('bookmakers', []))
-        if home_odds and draw_odds and away_odds:
-            extracted_data.append({'fixture_id': fixture_id, 'home_odds': home_odds, 'draw_odds': draw_odds, 'away_odds': away_odds})
-    return extracted_data
-
+# Pulls odds data from API
 def fetch_odds(api_key, date):
     """Fetch odds data for a given date."""
     url = "https://api-football-v1.p.rapidapi.com/v3/odds"
@@ -39,6 +19,7 @@ def fetch_odds(api_key, date):
     response = requests.get(url, headers=headers, params=querystring)
     return response.json()
 
+# Pulls fixtures data from API
 def fetch_fixtures(api_key, date):
     """Fetch fixtures data for a given date."""
     url = "https://api-football-v1.p.rapidapi.com/v3/fixtures"
@@ -49,6 +30,30 @@ def fetch_fixtures(api_key, date):
     querystring = {"date": date}
     response = requests.get(url, headers=headers, params=querystring)
     return response.json()
+
+
+
+# Itterates through Odds data to find specific odds in nested keys
+def extract_odds(bookmakers, bet_name="Match Winner"):
+    """Extracts odds for Home, Draw, and Away from the bookmakers data."""
+    for bookmaker in bookmakers:
+        for bet in bookmaker['bets']:
+            if bet['name'] == bet_name:
+                odds = {value['value']: value['odd'] for value in bet['values']}
+                return odds.get("Home"), odds.get("Draw"), odds.get("Away")
+    return None, None, None
+
+# Itterates through processed odds data and then appanends to df fixture id
+def extract_odds_data(odds_data):
+    """Extract odds and fixture ID from the odds data."""
+    extracted_data = []
+    for item in odds_data.get('response', []):
+        fixture_id = item['fixture']['id']
+        home_odds, draw_odds, away_odds = extract_odds(item.get('bookmakers', []))
+        if home_odds and draw_odds and away_odds:
+            extracted_data.append({'fixture_id': fixture_id, 'home_odds': home_odds, 'draw_odds': draw_odds, 'away_odds': away_odds})
+    return extracted_data
+
 
 def extract_fixtures_data(fixtures_data):
     """Extracts teams, league, and fixture ID from fixtures data."""
