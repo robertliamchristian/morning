@@ -2,16 +2,16 @@ import requests
 import json
 import pandas as pd
 
-def fetch_ny_flights():
+def fetch_ar_flights():
     url = "https://priceline-com-provider.p.rapidapi.com/v2/flight/departures"
     querystring = {
-        "departure_date":"2024-03-08",
+        "departure_date":"2024-04-10",
         "sid":"iSiX639",
         "adults":"1",
         "page":"1",
         "results_per_page":"10",
         "number_of_itineraries":"10",
-        "destination_city_id":"NYC",
+        "destination_city_id":"EZE",
         "origin_airport_code":"PDX"
     }
     headers = {

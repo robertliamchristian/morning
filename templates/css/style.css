@@ -1,0 +1,79 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f; /* Dark background */
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #2a2a40; /* Darker shade for container */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjusted shadow for darker theme */
+    color: #c0c0d6; /* Lighter text color for readability */
+}
+
+header {
+    background: #5a5a9f; /* Pastel blue */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.weather, .dates, .football {
+    background: #3d3d5c; /* Slightly lighter background for sections */
+    padding: 10px;
+    border-radius: 5px;
+    color: #d0d0f0; /* Lighter text color */
+}
+
+.weather h2, .football h2 {
+    color: #b8a0d0; /* Pastel purple */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li, p , h2, h1, h3, li{
+    background: #262640; /* Dark background for list items */
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #e0e0f0; /* Light text color */
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #6a5a8f; /* Pastel purple for header */
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    background-color: #2e2e4e; /* Dark background for table cells */
+    color: #c0c0d6; /* Light text color */
+    padding: 10px;
+    border-bottom: 1px solid #41416e; /* Subtle border for separation */
+}
