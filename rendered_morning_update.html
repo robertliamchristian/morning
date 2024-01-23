@@ -2,91 +2,13 @@
 <html>
 <head>
     <title>Morning Update</title>
-    <style>
-        body, html {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e2f; /* Dark background */
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: #2a2a40; /* Darker shade for container */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjusted shadow for darker theme */
-    color: #c0c0d6; /* Lighter text color for readability */
-}
-
-header {
-    background: #5a5a9f; /* Pastel blue */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-.weather, .dates, .football {
-    background: #3d3d5c; /* Slightly lighter background for sections */
-    padding: 10px;
-    border-radius: 5px;
-    color: #d0d0f0; /* Lighter text color */
-}
-
-.weather h2, .football h2 {
-    color: #b8a0d0; /* Pastel purple */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li, p , h2, h1, h3, li{
-    background: #262640; /* Dark background for list items */
-    margin-bottom: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: #e0e0f0; /* Light text color */
-}
-
-ul li:last-child {
-    margin-bottom: 0;
-}
-
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table th {
-    background-color: #6a5a8f; /* Pastel purple for header */
-    color: white;
-    padding: 10px;
-}
-
-table td {
-    background-color: #2e2e4e; /* Dark background for table cells */
-    color: #c0c0d6; /* Light text color */
-    padding: 10px;
-    border-bottom: 1px solid #41416e; /* Subtle border for separation */
-}
-</style>
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
+    <div id="container">
     <h1>Good Morning, Robbie!</h1>
-    <h2><strong>Date:</strong> Friday, January 19, 2024</h2>
+    <h2><strong>Date:</strong> Monday, January 22, 2024</h2>
     <h2> Plan: </h2>
     <ol>
         <li>Count Calories</li>
@@ -95,24 +17,26 @@ table td {
         <li>Meditation every day</li>
         <li>One sugar item a day</li>
     </ol>
+    </div>
+
     <section class="tasks">
         <h2>Task for today:</h2>
         <p><strong>Task (random):</strong> walk</p>
     </section>
     <div id="headers"><h2>Weather in Portland, OR</h2></div>
-    <p><strong>High:</strong> 35.96°F</p>
-    <p><strong>Low:</strong> 32°F</p> <!-- Ensure you have temp_low in your context -->
-    <p><strong>Conditions:</strong> broken clouds</p>
-    <p><strong>Sunrise:</strong> 07:44</p> <!-- Ensure you have sunrise in your context -->
-    <p><strong>Sunset:</strong> 16:57</p> <!-- Ensure you have sunset in your context -->
-    <p><strong>Days until New Year's:</strong> 347</p>
-    <p><strong>Days until Your Birthday:</strong> 16</p>
-    <p><strong>Days until Lindsay's Birthday:</strong> 138</p>
+    <p><strong>High:</strong> 49.98°F</p>
+    <p><strong>Low:</strong> 44.33°F</p> <!-- Ensure you have temp_low in your context -->
+    <p><strong>Conditions:</strong> overcast clouds</p>
+    <p><strong>Sunrise:</strong> 07:42</p> <!-- Ensure you have sunrise in your context -->
+    <p><strong>Sunset:</strong> 17:01</p> <!-- Ensure you have sunset in your context -->
+    <p><strong>Days until New Year's:</strong> 344</p>
+    <p><strong>Days until Your Birthday:</strong> 13</p>
+    <p><strong>Days until Lindsay's Birthday:</strong> 135</p>
     <section class="food">
         <h2>Food for today:</h2>
         <p><strong>Breakfast (random):</strong> protein shake</p>
-        <p><strong>Lunch (random):</strong> Subway</p>
-        <p><strong>Dinner (random):</strong> Mexican</p>
+        <p><strong>Lunch (random):</strong> sushi</p>
+        <p><strong>Dinner (random):</strong> fast food</p>
     </section>
     <section class="calendar">
         <h2>Calendar</h2>
@@ -126,14 +50,14 @@ table td {
   </thead>
   <tbody>
     <tr>
-      <td>Korova Appointment</td>
-      <td>2024-01-18T16:20:00-08:00</td>
-      <td>2024-01-18T17:20:00-08:00</td>
+      <td>O - DA Standup</td>
+      <td>2024-01-22T08:00:00-08:00</td>
+      <td>2024-01-22T09:00:00-08:00</td>
     </tr>
     <tr>
-      <td>O - DA Standup</td>
-      <td>2024-01-19T08:00:00-08:00</td>
-      <td>2024-01-19T09:00:00-08:00</td>
+      <td>O - ORS Strategy Call</td>
+      <td>2024-01-22T09:00:00-08:00</td>
+      <td>2024-01-22T09:30:00-08:00</td>
     </tr>
   </tbody>
 </table>
@@ -150,9 +74,9 @@ table td {
   </thead>
   <tbody>
     <tr>
-      <td>No Calendar Results Today</td>
-      <td></td>
-      <td></td>
+      <td>PT with Bailey</td>
+      <td>2024-01-22T07:30:00-08:00</td>
+      <td>2024-01-22T08:30:00-08:00</td>
     </tr>
   </tbody>
 </table>
@@ -176,70 +100,70 @@ table td {
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>143.10</td>
+      <td>143.1</td>
     </tr>
     <tr>
       <td>itinerary_1</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>151.10</td>
+      <td>152.6</td>
     </tr>
     <tr>
       <td>itinerary_2</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>152.60</td>
+      <td>156.1</td>
     </tr>
     <tr>
       <td>itinerary_3</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>152.60</td>
+      <td>173.7</td>
     </tr>
     <tr>
       <td>itinerary_4</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>160.57</td>
+      <td>179.1</td>
     </tr>
     <tr>
       <td>itinerary_5</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>172.63</td>
+      <td>183.6</td>
     </tr>
     <tr>
       <td>itinerary_6</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>179.10</td>
+      <td>188.1</td>
     </tr>
     <tr>
       <td>itinerary_7</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>183.60</td>
+      <td>188.6</td>
     </tr>
     <tr>
       <td>itinerary_8</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>188.10</td>
+      <td>202.6</td>
     </tr>
     <tr>
       <td>itinerary_9</td>
       <td>PDX</td>
       <td>NYC</td>
       <td>2024-03-08</td>
-      <td>188.60</td>
+      <td>202.6</td>
     </tr>
   </tbody>
 </table>
@@ -301,70 +225,70 @@ table td {
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_1</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_2</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_3</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_4</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_5</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_6</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_7</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>680.18</td>
+      <td>685.18</td>
     </tr>
     <tr>
       <td>itinerary_8</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>681.18</td>
+      <td>766.80</td>
     </tr>
     <tr>
       <td>itinerary_9</td>
       <td>PDX</td>
       <td>EZE</td>
       <td>2024-04-10</td>
-      <td>681.18</td>
+      <td>766.80</td>
     </tr>
   </tbody>
 </table>
@@ -383,34 +307,34 @@ table td {
   </thead>
   <tbody>
     <tr>
-      <td>2024-01-19 17:20:05-05:00</td>
-      <td>Ousted Florida Republican cleared of rape allegation but faces video voyeurism charge</td>
-      <td>Police have asked prosecutors to charge the ousted chair Christian Ziegler with illegally video recording the sexual encounter he had with a female acquaintance on Oct. 2.</td>
-      <td>https://www.npr.org/2024/01/19/1225720531/ousted-florida-republican-faces-video-voyeurism-charge</td>
+      <td>2024-01-23 00:01:43-05:00</td>
+      <td>Here are the 2024 New Hampshire presidential primary results</td>
+      <td>Voting concludes Tuesday in New Hampshire's first-in-the-nation presidential primary election. View the live results.</td>
+      <td>https://www.npr.org/2024/01/23/1225023058/nh-presidential-primary-live-results-2024</td>
     </tr>
     <tr>
-      <td>2024-01-19 17:09:53-05:00</td>
-      <td>The S&amp;P 500 surges to a record high as hopes about the economy — and Big Tech — grow</td>
-      <td>The index surged over 1% to hit a record high, surpassing the previous peak hit around two years ago, driven by big gains in large tech companies and by hopes about the economy.</td>
-      <td>https://www.npr.org/2024/01/19/1225725081/wall-street-sp-500-record-high-stocks-tech-economy-inflation-interest-rates</td>
+      <td>2024-01-22 21:00:59-05:00</td>
+      <td>Suspect in killing of 8 people near Chicago has died in Texas, police say</td>
+      <td>Police in Joliet, Illinois said Monday night that 23-year-old Romeo Nance was located by U.S. marshals near Natalia, Texas, and that after a confrontation Nance shot himself.</td>
+      <td>https://www.npr.org/2024/01/22/1226222085/authorities-search-for-a-suspect-in-the-shooting-deaths-of-8-people-near-chicago</td>
     </tr>
     <tr>
-      <td>2024-01-19 15:46:35-05:00</td>
-      <td>Sen. Tim Scott plans to endorse Trump ahead of New Hampshire primary</td>
-      <td>The South Carolina Republican, a prominent figure in Congress, dropped his own bid for president in November. Now Scott is throwing his support behind former President Donald Trump.</td>
-      <td>https://www.npr.org/2024/01/19/1225713821/sen-tim-scott-plans-to-endorse-trump-ahead-of-new-hampshire-primary</td>
+      <td>2024-01-22 20:39:24-05:00</td>
+      <td>The U.S. and U.K. bomb more Houthi sites in Yemen</td>
+      <td>The U.S. and U.K. said they used warship- and submarine-launched Tomahawk missiles and fighter jets to take out Houthi missile storage sites, drones and launchers.</td>
+      <td>https://www.npr.org/2024/01/22/1226222496/us-uk-airstrikes-houthis-yemen</td>
     </tr>
     <tr>
-      <td>2024-01-19 15:30:32-05:00</td>
-      <td>What to know about this weekend's brutal cold front in the central and eastern U.S.</td>
-      <td>A burst of arctic air is forecast to be warmer than last week. But nevertheless, the cold front will be expansive, bringing dangerous cold temperatures from Kansas to Pennsylvania.</td>
-      <td>https://www.npr.org/2024/01/19/1225686618/what-to-know-about-this-weekends-brutal-cold-front</td>
+      <td>2024-01-22 16:47:19-05:00</td>
+      <td>TikTok cuts jobs as tech layoffs continue to mount</td>
+      <td>The wildly popular video-sharing app is the latest technology firm to reduce staff in response to what executives say are ongoing business challenges.</td>
+      <td>https://www.npr.org/2024/01/22/1226127366/tiktok-cuts-jobs-tech-layoffs-china</td>
     </tr>
     <tr>
-      <td>2024-01-19 14:59:22-05:00</td>
-      <td>Alec Baldwin is indicted in fatal shooting of cinematographer after new gun analysis</td>
-      <td>Special prosecutors brought the case before a grand jury in Santa Fe, New Mexico this week, months after receiving a new analysis of the gun that was used.</td>
-      <td>https://www.npr.org/2024/01/19/1225700496/alec-baldwin-is-indicted-in-fatal-shooting-of-cinematographer-after-new-gun-anal</td>
+      <td>2024-01-22 15:03:10-05:00</td>
+      <td>Dexter Scott King, son of the Rev. Martin Luther King Jr., has died of cancer at 62</td>
+      <td>The third of four King children, the 62-year-old died from prostate cancer at his home in Malibu, Calif., according to the King Center, where he served as chairman.</td>
+      <td>https://www.npr.org/2024/01/22/1226136610/dexter-scott-king-death</td>
     </tr>
   </tbody>
 </table>
@@ -420,104 +344,119 @@ table td {
         <table border="1" class="dataframe stock-table">
   <thead>
     <tr style="text-align: right;">
-      <th>Date</th>
-      <th>Close</th>
-      <th>Symbol</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>2024-01-19</td>
-      <td>74.1500</td>
-      <td>CNC</td>
-    </tr>
-    <tr>
-      <td>2024-01-18</td>
-      <td>76.6000</td>
-      <td>CNC</td>
-    </tr>
-    <tr>
-      <td>2024-01-17</td>
-      <td>78.0000</td>
-      <td>CNC</td>
-    </tr>
-    <tr>
-      <td>2024-01-19</td>
-      <td>8.2300</td>
-      <td>UHG</td>
-    </tr>
-    <tr>
-      <td>2024-01-18</td>
-      <td>7.8300</td>
-      <td>UHG</td>
-    </tr>
-    <tr>
-      <td>2024-01-17</td>
-      <td>8.0200</td>
-      <td>UHG</td>
-    </tr>
-    <tr>
-      <td>2024-01-19</td>
-      <td>8.6600</td>
-      <td>GCMG</td>
-    </tr>
-    <tr>
-      <td>2024-01-18</td>
-      <td>8.6700</td>
-      <td>GCMG</td>
-    </tr>
-    <tr>
-      <td>2024-01-17</td>
-      <td>8.6400</td>
-      <td>GCMG</td>
-    </tr>
-    <tr>
-      <td>2024-01-19</td>
-      <td>73.2200</td>
-      <td>CVS</td>
-    </tr>
-    <tr>
-      <td>2024-01-18</td>
-      <td>73.8800</td>
-      <td>CVS</td>
-    </tr>
-    <tr>
-      <td>2024-01-17</td>
-      <td>76.9900</td>
-      <td>CVS</td>
-    </tr>
-    <tr>
-      <td>2024-01-19</td>
-      <td>302.0600</td>
-      <td>CI</td>
-    </tr>
-    <tr>
-      <td>2024-01-18</td>
-      <td>309.0800</td>
-      <td>CI</td>
-    </tr>
-    <tr>
-      <td>2024-01-17</td>
-      <td>308.4800</td>
-      <td>CI</td>
-    </tr>
   </tbody>
 </table>
     </div>
     <section class="quotes">
         <h2>Turkish Quote</h2>
-        <p><strong>Quote:</strong> Balık baştan kokar.</p>
-        <p><strong>Translation:</strong> The fish stinks from the head.</p>
+        <p><strong>Quote:</strong> Bir musibet bin nasihatten iyidir.</p>
+        <p><strong>Translation:</strong> One calamity is better than a thousand pieces of advice.</p>
     </section>
     <section class="affirmations">
         <h2>Affirmations</h2>
-        <p><strong>Affirmation:</strong> My body is powerful and knows how to heal itself.</p>
-        <!--
+        <p><strong>Affirmation:</strong> I trust my body to know what it needs, and I listen.</p>
+        
     <div class="football-odds">
         <h2>Today's Football Odds</h2>
-        
+        <table border="1" class="dataframe football-odds-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>date</th>
+      <th>Match</th>
+      <th>league_name</th>
+      <th>home_odds</th>
+      <th>draw_odds</th>
+      <th>away_odds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2024-01-22 07:00:00-08:00</td>
+      <td>Tajikistan vs Lebanon</td>
+      <td>Asian Cup</td>
+      <td>2.20</td>
+      <td>3.10</td>
+      <td>3.30</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 07:00:00-08:00</td>
+      <td>Qatar vs China</td>
+      <td>Asian Cup</td>
+      <td>2.25</td>
+      <td>3.10</td>
+      <td>3.30</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 10:00:00-08:00</td>
+      <td>Hapoel Tel Aviv vs Beitar Jerusalem</td>
+      <td>Ligat Ha'al</td>
+      <td>2.60</td>
+      <td>3.25</td>
+      <td>2.45</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:00:00-08:00</td>
+      <td>De Graafschap vs Jong PSV</td>
+      <td>Eerste Divisie</td>
+      <td>1.60</td>
+      <td>4.20</td>
+      <td>4.20</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:00:00-08:00</td>
+      <td>Roda vs FC Eindhoven</td>
+      <td>Eerste Divisie</td>
+      <td>1.63</td>
+      <td>3.90</td>
+      <td>4.40</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:00:00-08:00</td>
+      <td>Jong Ajax vs Groningen</td>
+      <td>Eerste Divisie</td>
+      <td>4.00</td>
+      <td>4.00</td>
+      <td>1.68</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:00:00-08:00</td>
+      <td>VVV Venlo vs ADO Den Haag</td>
+      <td>Eerste Divisie</td>
+      <td>2.80</td>
+      <td>3.40</td>
+      <td>2.20</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:00:00-08:00</td>
+      <td>Jong AZ vs Dordrecht</td>
+      <td>Eerste Divisie</td>
+      <td>2.20</td>
+      <td>3.70</td>
+      <td>2.65</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 11:45:00-08:00</td>
+      <td>Brighton vs Wolves</td>
+      <td>Premier League</td>
+      <td>1.63</td>
+      <td>4.10</td>
+      <td>5.00</td>
+    </tr>
+    <tr>
+      <td>2024-01-22 12:00:00-08:00</td>
+      <td>Granada CF vs Atletico Madrid</td>
+      <td>La Liga</td>
+      <td>5.25</td>
+      <td>4.10</td>
+      <td>1.61</td>
+    </tr>
+  </tbody>
+</table>
     </div>
--->
+
     <p>You can do this! You can lose weight and be healthy and feel young. You can be happy
         and feel like there is meaning in your life. You are strong and capable of very difficult
         things, and just because things have been hard doesn't mean they always will be.

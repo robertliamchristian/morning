@@ -10,7 +10,7 @@ from my_calendar import fetch_calendar_events
 from morning_dates import morning_update_dates
 from get_random import get_random_food, get_random_tasks, get_random_turkish_quote, get_random_affirmation
 from stock import get_daily_stock_data
-#from get_soccer import fetch_football_odds
+from get_soccer import fetch_football_odds
 from ny_flights import fetch_ny_flights
 from cy_flights import fetch_cy_flights
 from ar_flights import fetch_ar_flights
@@ -31,7 +31,7 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
     # Fetch weather data
     temp, weather_description, temp_high, temp_low, sunrise, sunset = fetch_weather(weather_api_key)
     # Fetch soccer data
-    #football_odds_data = fetch_football_odds(football_api_key)
+    football_odds_data = fetch_football_odds(football_api_key)
     # Fetch calendar events
     calendar_events = fetch_calendar_events(calendar_api_key, calendar_id)
     l_calendar_events = fetch_calendar_events(calendar_api_key, calendar_id2)
@@ -68,7 +68,7 @@ def morning_update(weather_api_key, calendar_api_key, calendar_id, football_api_
         'days_new_year': days_new_year,
         'days_birthday': days_birthday,
         'days_lindsay_birthday': days_lindsay_birthday,
-        #'football_odds_data': football_odds_data.to_html(index=False, classes='football-odds-table'),
+        'football_odds_data': football_odds_data.to_html(index=False, classes='football-odds-table'),
         'food_for_today': food_recommendations,
         'task_for_today': task_recommendations,
         'daily_stock_data': daily_stock_data.to_html(index=False, classes='stock-table'),

@@ -1,17 +1,18 @@
 body, html {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     background-color: #1e1e2f; /* Dark background */
 }
 
-.container {
+#container {
     max-width: 800px;
     margin: auto;
     background: #2a2a40; /* Darker shade for container */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjusted shadow for darker theme */
-    color: #c0c0d6; /* Lighter text color for readability */
+    color: #bd441c; /* Lighter text color for readability */
+    width : 90%;
 }
 
 header {
@@ -27,7 +28,7 @@ header h1 {
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .weather, .dates, .football {
@@ -46,13 +47,23 @@ ul {
     padding: 0;
 }
 
-ul li, p , h2, h1, h3, li{
-    background: #262640; /* Dark background for list items */
-    margin-bottom: 5px;
-    padding: 10px;
+ul li , h2, h1, h3{
+    background: #62608d; /* Dark background for list items */
+    margin-bottom: 1px;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: #e0e0f0; /* Light text color */
+}
+
+li, p {
+  
+    margin-bottom: 1px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #e0e0f0; /* Light text color */
+    background-color: #262640;
 }
 
 ul li:last-child {
@@ -75,5 +86,6 @@ table td {
     background-color: #2e2e4e; /* Dark background for table cells */
     color: #c0c0d6; /* Light text color */
     padding: 10px;
+    font-size: 9pt;
     border-bottom: 1px solid #41416e; /* Subtle border for separation */
 }
